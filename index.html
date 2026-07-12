@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon Missions</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#111827;
+            color:white;
+            text-align:center;
+            margin:0;
+            padding:40px;
+        }
+
+        h1{
+            margin-bottom:40px;
+        }
+
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:25px;
+            max-width:900px;
+            margin:auto;
+        }
+
+        .card{
+            background:#1f2937;
+            padding:30px;
+            border-radius:15px;
+            text-decoration:none;
+            color:white;
+            transition:.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+            background:#2563eb;
+        }
+
+        .icon{
+            font-size:50px;
+            margin-bottom:15px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🏆 Hackathon Dashboard</h1>
+
+<div class="grid">
+
+    <a class="card" href="anonymous-whistleblower/">
+        <div class="icon">📢</div>
+        <h2>Anonymous Whistleblower</h2>
+    </a>
+
+    <a class="card" href="basic_web/">
+        <div class="icon">🌐</div>
+        <h2>Basic Web</h2>
+    </a>
+
+    <a class="card" href="corrupt_economy/">
+        <div class="icon">💰</div>
+        <h2>Corrupt Economy</h2>
+    </a>
+
+    <a class="card" href="fact-checker/">
+        <div class="icon">✔️</div>
+        <h2>Fact Checker</h2>
+    </a>
+
+    <a class="card" href="seat_planner/">
+        <div class="icon">🪑</div>
+        <h2>Seat Planner</h2>
+    </a>
+
+    <a class="card" href="sos/">
+        <div class="icon">🚨</div>
+        <h2>SOS</h2>
+    </a>
+
+    <a class="card" href="syllabus_negotiator/">
+        <div class="icon">📚</div>
+        <h2>Syllabus Negotiator</h2>
+    </a>
+
+</div>
+
+</body>
+</html>
