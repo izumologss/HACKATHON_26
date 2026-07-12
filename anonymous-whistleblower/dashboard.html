@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard Control Panel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-root">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <i class="fa-solid fa-user-secret text-gradient"></i> CORE<span>SYS</span>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active"><a href="#"><i class="fa-solid fa-gauge"></i> Core Dashboard</a></li>
+                <li><a href="#"><i class="fa-solid fa-envelope-open-text"></i> Queue Complaints</a></li>
+                <li><a href="#"><i class="fa-solid fa-users-viewfinder"></i> Student Mapping</a></li>
+                <li><a href="#"><i class="fa-solid fa-shield-halved"></i> Audit Trails</a></li>
+                <li><a href="#"><i class="fa-solid fa-sliders"></i> Engine Rules</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="index.html" class="logout-link"><i class="fa-solid fa-right-from-bracket"></i> Terminate Admin</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-nav-dash">
+                <button class="menu-toggle-dash" id="dashMenuToggle"><i class="fa-solid fa-bars"></i></button>
+                <div class="search-box-dash">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Filter secure system signatures...">
+                </div>
+                <div class="user-profile-badge">
+                    <div class="avatar"><i class="fa-solid fa-user-tie"></i></div>
+                    <span>Operator: Active</span>
+                </div>
+            </header>
+
+            <div class="dash-scroll-container">
+                <div class="metrics-grid">
+                    <div class="metric-card glass-card">
+                        <div class="metric-info">
+                            <span>Pending Complaints</span>
+                            <h2>14</h2>
+                        </div>
+                        <i class="fa-solid fa-hourglass-half m-icon color-pending"></i>
+                    </div>
+                    <div class="metric-card glass-card">
+                        <div class="metric-info">
+                            <span>Verified Complaints</span>
+                            <h2>89</h2>
+                        </div>
+                        <i class="fa-solid fa-circle-check m-icon color-verified"></i>
+                    </div>
+                    <div class="metric-card glass-card">
+                        <div class="metric-info">
+                            <span>Rejected Inquiries</span>
+                            <h2>03</h2>
+                        </div>
+                        <i class="fa-solid fa-circle-xmark m-icon color-rejected"></i>
+                    </div>
+                    <div class="metric-card glass-card">
+                        <div class="metric-info">
+                            <span>Total Pipeline Input</span>
+                            <h2>106</h2>
+                        </div>
+                        <i class="fa-solid fa-folder-open m-icon color-total"></i>
+                    </div>
+                </div>
+
+                <div class="dashboard-split-row">
+                    <div class="glass-card element-panel workflow-strike-box">
+                        <h3>Dynamic Strike Warning Tracker Engine</h3>
+                        <p class="panel-subtitle">Current status level analysis mapped for verification metrics</p>
+                        
+                        <div class="strike-meter-wrapper">
+                            <div class="strike-circular-bar">
+                                <svg class="progress-ring-svg" width="160" height="160">
+                                    <circle class="ring-bg" stroke="#1e293b" stroke-width="12" fill="transparent" r="70" cx="80" cy="80"/>
+                                    <circle id="strikeCircle" class="ring-indicator" stroke="url(#neonGradient)" stroke-width="12" fill="transparent" r="70" cx="80" cy="80" stroke-dasharray="439.8" stroke-dashoffset="146.6"/>
+                                    <defs>
+                                        <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#00f2fe"/>
+                                            <stop offset="100%" stop-color="#4facfe"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <div class="strike-value-label">
+                                    <span class="curr-num" id="strikeLabelVal">2</span>
+                                    <span class="max-num">/ 3 Strikes</span>
+                                </div>
+                            </div>
+                            
+                            <div class="strike-meta-details">
+                                <div class="status-indicator-badge warning-alert">System Level: Level 2 Notice Active</div>
+                                <p>One remaining incident confirmation sequence triggers structural class protocol lock.</p>
+                                <button type="button" class="btn btn-primary btn-block btn-small" id="incrementStrikeBtn">Manual Escalation Test</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card element-panel">
+                        <h3>Classification Category Distributions</h3>
+                        <div class="chart-mock-container">
+                            <div class="chart-bar-row">
+                                <span class="lbl-bar">Tiffin Theft</span>
+                                <div class="bar-track"><div class="bar-fill" style="width: 75%"></div></div>
+                                <span class="val-bar">75%</span>
+                            </div>
+                            <div class="chart-bar-row">
+                                <span class="lbl-bar">Syllabus Mass</span>
+                                <div class="bar-track"><div class="bar-fill" style="width: 40%"></div></div>
+                                <span class="val-bar">40%</span>
+                            </div>
+                            <div class="chart-bar-row">
+                                <span class="lbl-bar">Bullying Profiles</span>
+                                <div class="bar-track"><div class="bar-fill" style="width: 15%"></div></div>
+                                <span class="val-bar">15%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card element-panel table-panel">
+                    <div class="table-header-action-row">
+                        <h3>Incoming Verification Pipeline Records</h3>
+                        <div class="filter-controls-group">
+                            <select id="tableFilter">
+                                <option value="ALL">Show All Channels</option>
+                                <option value="PENDING">Pending States</option>
+                                <option value="VERIFIED">Verified Operations</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-responsive-wrapper">
+                        <table class="data-matrix-table">
+                            <thead>
+                                <tr>
+                                    <th>Signature ID Node</th>
+                                    <th>Category Vector</th>
+                                    <th>Pipeline Status</th>
+                                    <th>Creation Timestamp</th>
+                                    <th class="text-right">Action Matrix</th>
+                                </tr>
+                            </thead>
+                            <tbody id="complaintTableRows">
+                                <tr data-status="PENDING">
+                                    <td><span class="mono-id">#ST-24510</span></td>
+                                    <td>Tiffin Misappropriation</td>
+                                    <td><span class="status-tag badge-pending">Pending Audit</span></td>
+                                    <td>2026-07-12 11:42</td>
+                                    <td class="text-right action-btn-cell">
+                                        <button class="action-btn view-trigger" title="Inspect Record Payload"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="action-btn approve-trigger" title="Verify Strike Signature"><i class="fa-solid fa-check"></i></button>
+                                        <button class="action-btn reject-trigger" title="Reject / Dismiss"><i class="fa-solid fa-xmark"></i></button>
+                                    </td>
+                                </tr>
+                                <tr data-status="VERIFIED">
+                                    <td><span class="mono-id">#ST-88491</span></td>
+                                    <td>Academic Overload</td>
+                                    <td><span class="status-tag badge-verified">Committed</span></td>
+                                    <td>2026-07-10 09:15</td>
+                                    <td class="text-right action-btn-cell">
+                                        <button class="action-btn view-trigger"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="action-btn disabled" disabled><i class="fa-solid fa-check"></i></button>
+                                        <button class="action-btn delete-trigger" title="Purge Record Tracking"><i class="fa-solid fa-trash-can"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal-overlay hidden" id="previewModal">
+        <div class="glass-card modal-container">
+            <div class="modal-header">
+                <h3>Structured Document Payload Inspection</h3>
+                <button type="button" class="modal-close" id="modalCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body-content">
+                <p><strong>System Identification Hash Reference:</strong> <span id="modalIdTarget">#ST-24510</span></p>
+                <hr style="border-color: rgba(255,255,255,0.1); margin: 1rem 0;">
+                <p><strong>Payload Operational Logs Decrypted:</strong></p>
+                <blockquote class="decrypted-stream-box">
+                    System instance recorded structural breakdown validation parameters directly inside primary class bounds. Subject execution triggered structural parameters out of boundaries continuously.
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

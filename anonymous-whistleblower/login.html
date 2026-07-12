@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Gateway - Mission 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="particle-container" id="particles"></div>
+    <div class="auth-wrapper">
+        <div class="glass-card auth-card">
+            <div class="auth-header">
+                <div class="icon-shape"><i class="fa-solid fa-key"></i></div>
+                <h2>Student Token Authorization</h2>
+                <p>Enter your assigned administrative structural secret map layout key</p>
+            </div>
+            <form id="studentLoginForm" class="auth-form" autocomplete="off">
+                <div class="form-group">
+                    <label for="secretCode">Secret Roll Map Key</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-fingerprint input-icon"></i>
+                        <input type="text" id="secretCode" placeholder="e.g. ALPHA-99X-NODE" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="passphrase">Access Passphrase <span class="optional">(Optional)</span></label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-lock input-icon"></i>
+                        <input type="password" id="passphrase" placeholder="••••••••">
+                    </div>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-container">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span> Preserve Token Hash
+                    </label>
+                    <a href="#" class="forgot-link" id="forgotTrigger">Lost Code Mapping?</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-glow">Validate Gateway Credentials</button>
+            </form>
+        </div>
+    </div>
+    
+    <div id="toast" class="toast hidden"></div>
+    <script src="js/login.js"></script>
+</body>
+</html>

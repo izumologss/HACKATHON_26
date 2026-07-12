@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Anonymously - Mission 1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="particle-container" id="particles"></div>
+    
+    <div class="form-layout-container">
+        <div class="glass-card wizard-card">
+            <div class="wizard-progress">
+                <div class="progress-line-track"><div class="progress-fill-bar" id="formProgressBar"></div></div>
+                <div class="step-node active" data-step="1"><i class="fa-solid fa-list"></i></div>
+                <div class="step-node" data-step="2"><i class="fa-solid fa-align-left"></i></div>
+                <div class="step-node" data-step="3"><i class="fa-solid fa-paperclip"></i></div>
+                <div class="step-node" data-step="4"><i class="fa-solid fa-eye"></i></div>
+            </div>
+
+            <form id="whistleblowerForm" novalidate>
+                <div class="wizard-step active" data-step="1">
+                    <h3>Select Incident Classification</h3>
+                    <p class="step-desc">Categorizing accurately routes computational priority logic queues safely.</p>
+                    <div class="form-group custom-select-wrapper">
+                        <label for="complaintCategory">Classification Core Vector</label>
+                        <select id="complaintCategory" required>
+                            <option value="" disabled selected>Choose class parameter...</option>
+                            <option value="Tiffin Theft">Tiffin Misappropriation / Theft</option>
+                            <option value="Bribe">Unsanctioned Inducement / Bribe</option>
+                            <option value="Too Much Syllabus">Academic Overload (Syllabus Excess)</option>
+                            <option value="Unfair Decision">Asymmetric Evaluation / Unfair Decision</option>
+                            <option value="Bullying">Interpersonal Hostility / Bullying</option>
+                            <option value="Harassment">Severe Malfeasance / Harassment</option>
+                            <option value="Other">Unmapped Category Protocol</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="wizard-step" data-step="2">
+                    <h3>Detailed Breakdown Parameters</h3>
+                    <p class="step-desc">Relay operational instances with complete analytical objective data points.</p>
+                    <div class="form-group">
+                        <label for="complaintDescription">Incident Event Log</label>
+                        <textarea id="complaintDescription" maxlength="1200" placeholder="Provide accurate event markers, timeline traces, and verifiable occurrences..." required></textarea>
+                        <div class="counter-display"><span id="charCount">0</span> / 1200 Characters Used</div>
+                    </div>
+                </div>
+
+                <div class="wizard-step" data-step="3">
+                    <h3>Secure Evidence Object Payload</h3>
+                    <p class="step-desc">Inject binary documents, system logs, images, or media verifying indicators.</p>
+                    <div class="drag-drop-zone" id="dropZone">
+                        <i class="fa-solid fa-cloud-arrow-up cloud-icon"></i>
+                        <p>Drag files into zone or <span class="browse-txt">browse filesystem</span></p>
+                        <input type="file" id="filePayload" id="filePayload" accept="image/*,application/pdf,video/*" hidden>
+                        <div class="file-spec-note">Supported Profiles: Images, PDFs, Videos (Max 25MB)</div>
+                    </div>
+                    <div id="filePreviewContainer" class="file-preview-box hidden">
+                        <i class="fa-solid fa-file-medical"></i>
+                        <span id="previewFileName">object_payload.dat</span>
+                        <button type="button" id="clearFileBtn"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                </div>
+
+                <div class="wizard-step" data-step="4">
+                    <h3>Final Integrity Seal Review</h3>
+                    <p class="step-desc">Your profile is safely obfuscated. Confirm system routing indicators below.</p>
+                    <div class="preview-verification-card">
+                        <div class="preview-row"><strong>Dynamic Profile Identity:</strong> <span class="neon-purple-text" id="maskedIdentityText">Generating Node...</span></div>
+                        <div class="preview-row"><strong>Payload Integrity State:</strong> <span class="neon-blue-text">Zero Leakage Cleared</span></div>
+                        <div class="preview-row"><strong>Encryption Node:</strong> <span class="security-tag">AES-256 Activated</span></div>
+                    </div>
+                    <div class="warning-notice-box">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span>Once submitted, transaction hashes are permanent and cannot be deleted by administrative overrides.</span>
+                    </div>
+                </div>
+
+                <div class="wizard-footer-nav">
+                    <button type="button" class="btn btn-outline hidden" id="prevBtn">Previous Step</button>
+                    <button type="button" class="btn btn-primary" id="nextBtn">Continue Phase</button>
+                    <button type="submit" class="btn btn-primary btn-glow hidden" id="submitBtn">Finalize Transmission</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Inline setup logic for step navigation architecture validation rules
+        let currentStepIdx = 1;
+        const formProgressBar = document.getElementById('formProgressBar');
+        const steps = document.querySelectorAll('.wizard-step');
+        const nodes = document.querySelectorAll('.step-node');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const submitBtn = document.getElementById('submitBtn');
+        const charCount = document.getElementById('charCount');
+        const descArea = document.getElementById('complaintDescription');
+
+        descArea.addEventListener('input', () => charCount.textContent = descArea.value.length);
+
+        function updateFormUI() {
+            steps.forEach(st => st.classList.remove('active'));
+            nodes.forEach(nd => nd.classList.remove('active'));
+            document.querySelector(`.wizard-step[data-step="${currentStepIdx}"]`).classList.add('active');
+            for(let i=0; i<currentStepIdx; i++) nodes[i].classList.add('active');
+
+            formProgressBar.style.width = `${((currentStepIdx - 1) / (steps.length - 1)) * 100}%`;
+
+            if (currentStepIdx === 1) prevBtn.classList.add('hidden');
+            else prevBtn.classList.remove('hidden');
+
+            if (currentStepIdx === steps.length) {
+                nextBtn.classList.add('hidden');
+                submitBtn.classList.remove('hidden');
+                document.getElementById('maskedIdentityText').textContent = 'Student #' + Math.floor(100000 + Math.random() * 900000);
+            } else {
+                nextBtn.classList.remove('hidden');
+                submitBtn.classList.add('hidden');
+            }
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if(currentStepIdx === 1 && !document.getElementById('complaintCategory').value) return alert('Select incident category');
+            if(currentStepIdx === 2 && !descArea.value.trim()) return alert('Please enter case data descriptions');
+            currentStepIdx++;
+            updateFormUI();
+        });
+        prevBtn.addEventListener('click', () => { currentStepIdx--; updateFormUI(); });
+
+        // Drag Drop Sandbox
+        const dz = document.getElementById('dropZone');
+        const fp = document.getElementById('filePayload');
+        dz.addEventListener('click', () => fp.click());
+        fp.addEventListener('change', (e) => {
+            if(e.target.files.length) {
+                document.getElementById('filePreviewContainer').classList.remove('hidden');
+                document.getElementById('previewFileName').textContent = e.target.files[0].name;
+            }
+        });
+        document.getElementById('clearFileBtn').addEventListener('click', () => {
+            fp.value = "";
+            document.getElementById('filePreviewContainer').classList.add('hidden');
+        });
+
+        document.getElementById('whistleblowerForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            window.location.href = 'success.html';
+        });
+    </script>
+</body>
+</html>

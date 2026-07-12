@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Control Login - Mission 1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="particle-container" id="particles"></div>
+    <div class="auth-wrapper">
+        <div class="glass-card auth-card">
+            <div class="auth-header">
+                <div class="icon-shape"><i class="fa-solid fa-user-shield"></i></div>
+                <h2>Staff Command Center</h2>
+                <p>Provide secure authority operator credentials access control matrix</p>
+            </div>
+            <form id="adminLoginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="adminUser">System Security Username</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-user-astronaut input-icon"></i>
+                        <input type="text" id="adminUser" placeholder="Enter user handle..." required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="adminPass">Security Passcode System Vector</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-key input-icon"></i>
+                        <input type="password" id="adminPass" placeholder="••••••••" required>
+                    </div>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span> Persist Terminal Handshake
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-glow">Verify Admin Access</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('adminLoginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            window.location.href = 'dashboard.html';
+        });
+    </script>
+</body>
+</html>
