@@ -1,139 +1,331 @@
 # HACKATHON_26
 
+<div align="center">
 
-Overview
+# 🚨 Anti-Kuddu Protocol Hub
 
-Anti-Kuddu Protocol Hub is a central dashboard that links six independent modules, each tackling a different pain point in campus life — from anonymous reporting to seat allocation to fact-checking. The hub itself is a lightweight landing page; every module is a self-contained mini-app reachable from the main navigation.
+### 🏆 Hackathon 2026 Project
 
-Modules
+*A centralized emergency command center built to tackle multiple campus challenges through one unified platform.*
 
-ModulePurpose🕵️ Anonymous WhistleblowerLets students report classroom misconduct anonymously, with a student portal and an admin dashboard for reviewing/verifying reports.🪑 Seat Planner MatrixGenerates or manages classroom/exam seating arrangements.📚 Syllabus NegotiatorProfile-based tool for tracking/negotiating syllabus coverage and pacing.💰 Corrupt Economy TraceTracks and visualizes reports related to financial misconduct.🆘 SOS Rescue FlareQuick-access emergency alert/help-request tool.✅ Fact Checker EngineProject-based tool for verifying claims/information.
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white)
+![Hackathon](https://img.shields.io/badge/Hackathon-2026-blueviolet?style=for-the-badge)
 
+---
 
-Framework & Tech Stack
+### ⚡ One Hub • Six Modules • One Mission
 
-This project is built as a static multi-page site, deployed via GitHub Pages:
+</div>
 
+---
 
-HTML5 / CSS3 / Vanilla JavaScript — no build step or bundler required.
-Each module lives in its own subfolder (e.g. /anonymous-whistleblower, /seat_planner, /syllabus_negotiator, /corrupt_economy, /sos, /fact-checker) with its own pages (e.g. login.html, admin.html, complaint.html, profile/, project/).
-Client-side only — no backend server is required to view the UI; any dynamic/data-driven features (auth, storage, complaint records) run against whatever browser storage or API layer is wired into each module (see each module's own code for specifics).
-Hosting/deployment: GitHub Pages, serving directly from the repository root.
+# 📖 Overview
 
+**Anti-Kuddu Protocol Hub** is a centralized dashboard connecting **six independent modules**, each solving a different real-world campus problem.
 
+Rather than building one massive application, every module works as a **standalone mini application**, allowing each feature to be developed, tested, and maintained independently while remaining accessible from one unified landing page.
 
-ℹ️ If any module uses a specific framework, API, or database (e.g. Firebase, localStorage, a JSON mock API), list it here per module so reviewers know exactly what's running under the hood.
+The project demonstrates how a lightweight static architecture can still provide an organized ecosystem of tools for campus safety, transparency, planning, and emergency response.
 
+---
 
+# ✨ Features
 
+- 🎯 Central dashboard for all modules
+- 🔒 Anonymous reporting system
+- 🪑 Classroom & exam seat planning
+- 📚 Syllabus progress tracking
+- 💰 Financial misconduct visualization
+- 🚨 Emergency SOS system
+- ✅ Fact verification engine
+- 🌐 Fully static & GitHub Pages compatible
+- ⚡ Zero build tools required
 
-Architecture & Design Trade-offs
+---
 
-Why a static multi-page hub instead of a single-page app (SPA):
+# 🧩 Project Modules
 
+| Module | Description |
+|---------|-------------|
+| 🕵️ **Anonymous Whistleblower** | Allows students to anonymously report classroom misconduct with separate student and admin interfaces. |
+| 🪑 **Seat Planner Matrix** | Creates and manages classroom or examination seating arrangements efficiently. |
+| 📚 **Syllabus Negotiator** | Helps monitor syllabus progress and course pacing based on different academic profiles. |
+| 💰 **Corrupt Economy Trace** | Tracks and visualizes reports related to financial misconduct and corruption. |
+| 🆘 **SOS Rescue Flare** | Emergency assistance module for instantly requesting help during critical situations. |
+| ✅ **Fact Checker Engine** | Verifies submitted claims and information using project-based validation workflows. |
 
-✅ Zero build tooling — every module can be opened directly in a browser or served with any static file server, which matters a lot under hackathon time pressure.
-✅ Each module is fully decoupled, so team members could build/debug their feature independently without merge conflicts in a shared app shell.
-✅ GitHub Pages hosting is free and requires no server infrastructure.
-⚠️ Trade-off: no shared state/session between modules — e.g. a login on one module doesn't carry over to another, since there's no central app framework managing state.
-⚠️ Trade-off: no client-side routing/framework (React/Vue) means more repeated markup/styling across module pages, at the cost of some duplication for the sake of simplicity and speed.
-⚠️ Trade-off: without a real backend, sensitive flows (anonymous reporting, admin verification) are simulated/client-side for demo purposes rather than production-secure — this was a deliberate scope cut to prioritize a working end-to-end demo within the hackathon timeframe.
+---
 
+# 🛠️ Tech Stack
 
+| Technology | Usage |
+|------------|-------|
+| 🌐 HTML5 | Structure |
+| 🎨 CSS3 | Styling |
+| ⚙️ Vanilla JavaScript | Client-side Logic |
+| 🚀 GitHub Pages | Deployment |
+| 💻 VS Code | Development |
 
-✏️ Adjust this section with the actual reasons your team chose this structure — judges usually want to see genuine reasoning, not just a list of pros/cons.
+---
 
+# 📂 Project Structure
 
+```text
+HACKATHON_26/
+│
+├── index.html
+│
+├── anonymous-whistleblower/
+│
+├── seat_planner/
+│
+├── syllabus_negotiator/
+│
+├── corrupt_economy/
+│
+├── sos/
+│
+├── fact-checker/
+│
+├── assets/
+│
+├── css/
+│
+├── js/
+│
+└── docs/
+    └── screenshots/
+```
 
+---
 
-Local Setup Instructions
+# ⚙️ Framework & Architecture
 
-Prerequisites
+This project is intentionally built as a **Static Multi-Page Application (MPA)**.
 
+Each module lives inside its own folder and can operate independently while remaining connected through the central dashboard.
 
-A modern web browser (Chrome, Firefox, Edge, etc.)
-Git installed
-(Optional but recommended) VS Code with the Live Server extension, or Python 3, for serving the site locally
+### ✔ Advantages
 
+- No build tools required
+- Easy deployment on GitHub Pages
+- Fully modular architecture
+- Faster development during hackathons
+- Team members can work independently
+- Easy debugging
+- Lightweight and fast loading
 
-1. Clone the repository
+### ⚠ Trade-offs
 
-bashgit clone https://github.com/izumologss/HACKATHON_26.git
+- No shared authentication/session across modules
+- Some UI components are duplicated
+- No backend database
+- Sensitive operations are simulated for demonstration purposes
+
+These trade-offs were intentionally chosen to maximize development speed and deliver a complete working prototype within the hackathon timeframe.
+
+---
+
+# 🚀 Local Installation
+
+## 📋 Prerequisites
+
+- Git
+- VS Code (Recommended)
+- Live Server Extension (Recommended)
+- Any modern browser
+
+---
+
+## 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/izumologss/HACKATHON_26.git
+
 cd HACKATHON_26
+```
 
-2. Run it locally
+---
 
-Option A — VS Code Live Server
+## 2️⃣ Run Locally
 
+### Option A (Recommended)
 
-Open the folder in VS Code.
-Right-click index.html → Open with Live Server.
-The hub will open at http://127.0.0.1:5500/.
+Using **VS Code Live Server**
 
+1. Open the project folder.
+2. Right-click **index.html**
+3. Click **Open with Live Server**
 
-Option B — Python's built-in server
+Project will open at
 
-bashpython3 -m http.server 8000
+```
+http://127.0.0.1:5500/
+```
 
-Then visit http://localhost:8000/ in your browser.
+---
 
-Option C — Just open the file
-Double-click index.html to open it directly in your browser (some modules that fetch local JSON/assets may not work fully this way due to browser file-access restrictions — Option A or B is recommended).
+### Option B
 
-3. Navigate the modules
+Python Server
 
-From the hub landing page, click through to any module (e.g. Anonymous Whistleblower, Seat Planner Matrix). Each module has its own subfolder and can also be opened directly, e.g.:
+```bash
+python3 -m http.server 8000
+```
 
-/anonymous-whistleblower/index.html
-/seat_planner/index.html
-/syllabus_negotiator/profile/index.html
-/corrupt_economy/index.html
-/sos/index.html
-/fact-checker/project/index.html
+Visit
 
+```
+http://localhost:8000
+```
 
-UI Layout Screenshots
+---
 
+### Option C
 
-📸 Add screenshots of each module here before submitting. Suggested format:
+Simply open
 
+```
+index.html
+```
 
+directly in your browser.
 
-Hub Landing Page
+> **Note:** Some browser security restrictions may prevent local JSON or API requests when opening files directly. Live Server is recommended.
 
-![Hub Landing Page](./docs/screenshots/hub.png)
+---
 
-Anonymous Whistleblower
+# 🧭 Module Navigation
 
-![Anonymous Whistleblower](./docs/screenshots/whistleblower.png)
+Each module can also be accessed individually.
 
-Seat Planner Matrix
+```text
+/anonymous-whistleblower/
 
-![Seat Planner Matrix](./docs/screenshots/seat-planner.png)
+/seat_planner/
 
-Syllabus Negotiator
+/syllabus_negotiator/
 
-![Syllabus Negotiator](./docs/screenshots/syllabus-negotiator.png)
+/corrupt_economy/
 
-Corrupt Economy Trace
+/sos/
 
-![Corrupt Economy Trace](./docs/screenshots/corrupt-economy.png)
+/fact-checker/
+```
 
-SOS Rescue Flare
+---
 
-![SOS Rescue Flare](./docs/screenshots/sos.png)
+# 🖼️ UI Screenshots
 
-Fact Checker Engine
+> Replace the images below with your own screenshots before submission.
 
-![Fact Checker Engine](./docs/screenshots/fact-checker.png)
+## 🏠 Hub Landing Page
 
-(Create a docs/screenshots/ folder in your repo, drop your .png/.jpg files in there, and update the paths above to match your actual filenames.)
+```md
+![Hub](docs/screenshots/hub.png)
+```
 
+---
 
-Built By
+## 🕵️ Anonymous Whistleblower
 
-error404 — Hackathon 2026
+```md
+![Whistleblower](docs/screenshots/whistleblower.png)
+```
 
-License
+---
 
-Add your license here (e.g. MIT) if the hackathon requires one.
+## 🪑 Seat Planner Matrix
+
+```md
+![Seat Planner](docs/screenshots/seat-planner.png)
+```
+
+---
+
+## 📚 Syllabus Negotiator
+
+```md
+![Syllabus](docs/screenshots/syllabus-negotiator.png)
+```
+
+---
+
+## 💰 Corrupt Economy Trace
+
+```md
+![Corrupt Economy](docs/screenshots/corrupt-economy.png)
+```
+
+---
+
+## 🚨 SOS Rescue Flare
+
+```md
+![SOS](docs/screenshots/sos.png)
+```
+
+---
+
+## ✅ Fact Checker Engine
+
+```md
+![Fact Checker](docs/screenshots/fact-checker.png)
+```
+
+---
+
+# 💡 Design Philosophy
+
+The project follows a **modular-first architecture**, where each feature behaves like an independent application while still being accessible through one unified dashboard.
+
+This approach offers:
+
+- Better scalability
+- Easier maintenance
+- Independent module development
+- Faster iteration during hackathons
+- Cleaner project organization
+
+---
+
+# 🌍 Deployment
+
+The project is deployed using **GitHub Pages**.
+
+Simply push changes to the repository, and GitHub Pages serves the project directly without requiring any server-side infrastructure.
+
+---
+
+# 🤝 Team
+
+<div align="center">
+
+## 👨‍💻 error404
+
+### Hackathon 2026
+
+*"Building technology for a safer and smarter campus."*
+
+</div>
+
+---
+
+# 📜 License
+
+This project was created for **Hackathon 2026**.
+
+You may replace this section with an official license such as **MIT** if required.
+
+---
+
+<div align="center">
+
+## ⭐ If you like this project, don't forget to give it a star!
+
+Made with ❤️ by **error404**
+
+</div>
