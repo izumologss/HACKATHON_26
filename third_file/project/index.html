@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission 3 – The Syllabus Negotiator | AI Powered Smart Study Planner</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark-theme">
+    <!-- Animated Particle Background Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Custom Cursor Glow -->
+    <div class="custom-cursor"></div>
+
+    <!-- Toast Notifications Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- App Shell Container Layout -->
+    <div class="app-container">
+        
+        <!-- Premium Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-brain-circuit brain-glow"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>Mission 3</h1>
+                    <span>AI Negotiator</span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <a href="#home" class="menu-item active" data-target="home-view">
+                    <i class="fa-solid fa-house"></i> <span>Home</span>
+                </a>
+                <a href="#dashboard" class="menu-item" data-target="dashboard-view">
+                    <i class="fa-solid fa-chart-pie"></i> <span>Dashboard</span>
+                </a>
+                <a href="#analyzer" class="menu-item" data-target="analyzer-view">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> <span>AI Analyzer & RAG</span>
+                </a>
+                <a href="#planner" class="menu-item" data-target="planner-view">
+                    <i class="fa-solid fa-calendar-days"></i> <span>Study Planner</span>
+                </a>
+                <a href="#countdown" class="menu-item" data-target="countdown-view">
+                    <i class="fa-solid fa-stopwatch"></i> <span>Exam Countdown</span>
+                </a>
+                <a href="#settings" class="menu-item" data-target="settings-view">
+                    <i class="fa-solid fa-sliders"></i> <span>System Settings</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="avatar">AI</div>
+                    <div class="user-info">
+                        <p class="user-name">Premium Scholar</p>
+                        <span class="user-status"><span class="pulse-dot"></span>AI Online</span>
+                    </div>
+                </div>
+                <button class="logout-btn" id="logoutBtn"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+            </div>
+        </aside>
+
+        <!-- Main Content Core Wrapper -->
+        <main class="main-content">
+            
+            <!-- Dynamic View: Home -->
+            <section id="home-view" class="app-view active-view">
+                <div class="hero-section">
+                    <div class="hero-content">
+                        <div class="badge-premium"><i class="fa-solid fa-bolt"></i> Next-Gen AI Integration</div>
+                        <h2 class="hero-title">Mission 3<br><span class="gradient-text">AI Syllabus Negotiator</span></h2>
+                        <p class="hero-subtitle">Transform lengthy syllabus instructions, core objectives, and massive academic files into a highly tailored, streamlined daily execution roadmap effortlessly.</p>
+                        <div class="hero-actions">
+                            <button class="btn btn-primary ripple" onclick="switchView('analyzer-view')"><i class="fa-solid fa-wand-magic-sparkles"></i> Analyze Syllabus</button>
+                            <button class="btn btn-secondary ripple" id="loadDemoBtn"><i class="fa-solid fa-bolt"></i> Try Demo Data</button>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="brain-container">
+                            <div class="brain-core"></div>
+                            <div class="orbit orbit-1"></div>
+                            <div class="orbit orbit-2"></div>
+                            <div class="orbit orbit-3"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Metrics Counter Layout -->
+                <div class="metrics-grid">
+                    <div class="metric-card glass-card">
+                        <div class="metric-icon"><i class="fa-solid fa-file-invoice"></i></div>
+                        <div class="metric-data">
+                            <h3 class="counter" data-target="1420">0</h3>
+                            <p>Syllabi Negotiated</p>
+                        </div>
+                    </div>
+                    <div class="metric-card glass-card">
+                        <div class="metric-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <div class="metric-data">
+                            <h3 class="counter" data-target="8940">0</h3>
+                            <p>Core Topics Extracted</p>
+                        </div>
+                    </div>
+                    <div class="metric-card glass-card">
+                        <div class="metric-icon"><i class="fa-solid fa-route"></i></div>
+                        <div class="metric-data">
+                            <h3 class="counter" data-target="3120">0</h3>
+                            <p>Schedules Auto-Generated</p>
+                        </div>
+                    </div>
+                    <div class="metric-card glass-card">
+                        <div class="metric-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+                        <div class="metric-data">
+                            <h3 class="counter" data-target="24500">0</h3>
+                            <p>Productive Hours Saved</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Highlighting Section -->
+                <div class="section-header">
+                    <h2>Core Intelligence Features</h2>
+                    <p>Designed to systematically filter structural academic noise.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card glass-card">
+                        <i class="fa-solid fa-compress-alt feature-icon"></i>
+                        <h3>AI Syllabus Summarizer</h3>
+                        <p>Condenses hundreds of pages into functional structural blueprints instantly.</p>
+                    </div>
+                    <div class="feature-card glass-card">
+                        <i class="fa-solid fa-filter feature-icon"></i>
+                        <h3>Curriculum Noise Filter</h3>
+                        <p>Automatically isolates assessment criteria while purging filler text.</p>
+                    </div>
+                    <div class="feature-card glass-card">
+                        <i class="fa-solid fa-calendar-check feature-icon"></i>
+                        <h3>Smart Study Planner</h3>
+                        <p>Allocates structured time blocks optimized for optimal active recall cycles.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dynamic View: Dashboard -->
+            <section id="dashboard-view" class="app-view">
+                <div class="view-header">
+                    <div>
+                        <h2>Analytics Dashboard</h2>
+                        <p>Real-time telemetry of your calculated course metrics.</p>
+                    </div>
+                    <div class="dashboard-time-badge" id="currentDateBadge">July 12, 2026</div>
+                </div>
+
+                <div class="dashboard-summary-row">
+                    <div class="mini-stat glass-card">
+                        <span>Analyses Logged</span>
+                        <strong id="dashTotalAnalyses">12</strong>
+                    </div>
+                    <div class="mini-stat glass-card">
+                        <span>Target Exam Date</span>
+                        <strong id="dashTargetDate">Set Date</strong>
+                    </div>
+                    <div class="mini-stat glass-card">
+                        <span>Syllabus Target Accuracy</span>
+                        <strong>99.4%</strong>
+                    </div>
+                </div>
+
+                <div class="chart-matrix">
+                    <div class="chart-card glass-card">
+                        <h3>Topic Weight Distribution</h3>
+                        <div class="native-bar-chart" id="topicWeightChart">
+                            <!-- Populated Dynamically via JS -->
+                            <div class="chart-placeholder">Run an analysis sequence to display metrics.</div>
+                        </div>
+                    </div>
+                    <div class="chart-card glass-card">
+                        <h3>Allocated Hours Breakdown</h3>
+                        <div class="native-donut-chart" id="timeAllocChart">
+                            <div class="donut-segment segment-high" style="--accent: var(--neon-cyan); --value: 45;"></div>
+                            <div class="donut-segment segment-med" style="--accent: var(--neon-purple); --value: 35;"></div>
+                            <div class="donut-segment segment-low" style="--accent: var(--neon-blue); --value: 20;"></div>
+                            <div class="donut-hole">
+                                <span id="donutTotalHours">0 hrs</span>
+                                <small>Total Scope</small>
+                            </div>
+                        </div>
+                        <div class="chart-legend">
+                            <span><i class="fa-solid fa-circle" style="color: var(--neon-cyan)"></i> High Priority</span>
+                            <span><i class="fa-solid fa-circle" style="color: var(--neon-purple)"></i> Med Priority</span>
+                            <span><i class="fa-solid fa-circle" style="color: var(--neon-blue)"></i> Low Priority</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dynamic View: Analyzer & RAG Interface -->
+            <section id="analyzer-view" class="app-view">
+                <div class="view-header">
+                    <div>
+                        <h2>AI Negotiator Engine</h2>
+                        <p>Feed unstructured raw curriculum parameters directly into the context processing matrix.</p>
+                    </div>
+                </div>
+
+                <div class="analyzer-workspace">
+                    <!-- Left Column: Input Interfaces -->
+                    <div class="input-panel">
+                        <div class="glass-card element-margin">
+                            <div class="card-title-row">
+                                <h3><i class="fa-solid fa-keyboard"></i> Raw Syllabus Context</h3>
+                                <div class="counter-badge" id="wordCounter">0 Words</div>
+                            </div>
+                            <textarea id="syllabusInput" placeholder="Paste comprehensive curriculum schedules, grading policies, complex outlines, or assignments blocks here..."></textarea>
+                            <div class="input-actions-bar">
+                                <button class="btn btn-secondary btn-sm" id="btnSampleInput"><i class="fa-solid fa-database"></i> Insert Sample</button>
+                                <button class="btn btn-secondary btn-sm" id="btnClearInput"><i class="fa-solid fa-trash-can"></i> Clear</button>
+                            </div>
+                        </div>
+
+                        <!-- Dedicated RAG Component Interlocking Matrix -->
+                        <div class="glass-card">
+                            <h3><i class="fa-solid fa-layer-group"></i> Grounding RAG Context Matrix</h3>
+                            <p class="subtitle-text">Upload institutional documentation to check for syllabus deviations automatically.</p>
+                            <div class="rag-dropzone" id="ragDropzone">
+                                <i class="fa-solid fa-cloud-arrow-up cloud-glow"></i>
+                                <p>Drag & Drop Official Curriculum Matrix or <span class="highlight">Browse files</span></p>
+                                <input type="file" id="ragFileInput" multiple style="display: none;">
+                            </div>
+                            <div class="file-list" id="uploadedFilesContainer"></div>
+                        </div>
+
+                        <button class="btn btn-primary w-100 btn-lg element-margin ripple" id="btnExecuteAnalysis">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Execute Context Negotiation
+                        </button>
+                    </div>
+
+                    <!-- Right Column: Outputs and Visual Processing States -->
+                    <div class="output-panel">
+                        <!-- Simulated Processor Overlay Grid -->
+                        <div class="processing-overlay hidden" id="analyzerLoader">
+                            <div class="loader-spinner"></div>
+                            <p id="loaderStatusText">Parsing document metadata tokens...</p>
+                            <div class="progress-bar-container"><div class="progress-bar-fill" id="loaderProgressBar"></div></div>
+                        </div>
+
+                        <div class="glass-card full-height" id="outputPlaceholderCard">
+                            <div class="empty-state">
+                                <i class="fa-solid fa-bezier-curve empty-icon-glow"></i>
+                                <h3>Engine Idle</h3>
+                                <p>Provide a syllabus framework configuration in the active input vector cards to generate structural operational data tables.</p>
+                            </div>
+                        </div>
+
+                        <!-- Full Data-View Elements Output Component Layer (Initially Hidden) -->
+                        <div class="analysis-results-wrapper hidden" id="analysisResultsWrapper">
+                            <div class="action-header-sticky">
+                                <h4>Matrix Resolution Parameters</h4>
+                                <div class="action-btn-group">
+                                    <button class="btn btn-secondary btn-sm" id="btnCopyAnalysis"><i class="fa-solid fa-copy"></i></button>
+                                    <button class="btn btn-secondary btn-sm" id="btnDownloadJSON"><i class="fa-solid fa-code"></i> JSON</button>
+                                </div>
+                            </div>
+
+                            <div class="metric-ribbon element-margin">
+                                <div class="ribbon-node">
+                                    <span class="label">Difficulty Assessment</span>
+                                    <span class="value text-neon-purple" id="resDifficulty">Elevated</span>
+                                </div>
+                                <div class="ribbon-node">
+                                    <span class="label">Calculated Hours</span>
+                                    <span class="value text-neon-cyan" id="resHours">0 Hours</span>
+                                </div>
+                                <div class="ribbon-node">
+                                    <span class="label">Content Noise Reduction</span>
+                                    <span class="value text-neon-blue" id="resNoise">0%</span>
+                                </div>
+                            </div>
+
+                            <div class="glass-card element-margin result-block-summary">
+                                <h4><i class="fa-solid fa-align-left text-neon-cyan"></i> Executive Abstract</h4>
+                                <p id="resSummaryText"></p>
+                            </div>
+
+                            <!-- Interactive RAG Differential Analysis Layout -->
+                            <div class="glass-card element-margin">
+                                <h4><i class="fa-solid fa-code-compare text-neon-purple"></i> RAG Alignment Differential Output</h4>
+                                <div class="rag-diff-viewer" id="ragDiffContainer">
+                                    <!-- Dynamic text comparison blocks render here -->
+                                </div>
+                            </div>
+
+                            <div class="two-column-grid">
+                                <div class="glass-card content-success-box">
+                                    <h4><i class="fa-solid fa-circle-check text-neon-cyan"></i> Extracted Critical Milestones</h4>
+                                    <ul class="clean-list" id="resCoreTopics"></ul>
+                                </div>
+                                <div class="glass-card content-danger-box">
+                                    <h4><i class="fa-solid fa-circle-xmark text-soft-red"></i> Extraneous Suppressed Noise</h4>
+                                    <ul class="clean-list" id="resIgnoredTopics"></ul>
+                                </div>
+                            </div>
+
+                            <div class="glass-card element-margin recommendation-box">
+                                <h4><i class="fa-solid fa-lightbulb text-neon-cyan"></i> Strategic Path Recommendations</h4>
+                                <p id="resRecommendations"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dynamic View: Study Planner -->
+            <section id="planner-view" class="app-view">
+                <div class="view-header">
+                    <div>
+                        <h2>Smart Study Planner</h2>
+                        <p>Dynamic chronological layout configuration utilizing priority scheduling architecture.</p>
+                    </div>
+                    <div class="planner-controls">
+                        <div class="segmented-control">
+                            <button class="seg-btn active" data-view="daily">Daily Schedule</button>
+                            <button class="seg-btn" data-view="weekly">Weekly View</button>
+                            <button class="seg-btn" data-view="monthly">Monthly Blocks</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="planner-layout-grid">
+                    <!-- Left Side: Interactive Calendar Controller Component -->
+                    <div class="planner-sidebar-controls">
+                        <div class="glass-card element-margin">
+                            <h3>Tracking Metrics</h3>
+                            <div class="progress-radial-container">
+                                <div class="radial-progress-bar" style="background: conic-gradient(var(--neon-cyan) 0%, rgba(255,255,255,0.05) 0%);">
+                                    <div class="radial-inner-circle">
+                                        <span id="txtRadialPercent">0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-center subtitle-text element-margin">Calculated Completion Metric</p>
+                        </div>
+
+                        <div class="glass-card">
+                            <h3>Pomodoro Productivity Engine</h3>
+                            <div class="pomodoro-timer" id="pomoDisplay">25:00</div>
+                            <div class="pomo-controls-row">
+                                <button class="btn btn-secondary btn-sm" id="btnStartPomo"><i class="fa-solid fa-play"></i> Start</button>
+                                <button class="btn btn-secondary btn-sm" id="btnResetPomo"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Interactive Time Schedule Core Sheet -->
+                    <div class="planner-schedule-sheet glass-card">
+                        <div class="schedule-sheet-header">
+                            <h3 id="scheduleSheetTitle">Active Core Time Blocks</h3>
+                            <button class="btn btn-primary btn-sm" id="btnTriggerMockTest"><i class="fa-solid fa-graduation-cap"></i> Run Mock Exam Mode</button>
+                        </div>
+                        <div class="timeline-blocks-container" id="scheduleTimelineContainer">
+                            <div class="empty-state">
+                                <i class="fa-solid fa-calendar-xmark"></i>
+                                <h3>No Schedule Matrix Compiled</h3>
+                                <p>Execute the AI Syllabus Analysis sequence to construct dynamic custom calendar schedules.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dynamic View: Exam Countdown -->
+            <section id="countdown-view" class="app-view">
+                <div class="view-header">
+                    <div>
+                        <h2>Countdown Engine Matrix</h2>
+                        <p>Establish exact chronos-parameters to structure priority time allocation algorithms.</p>
+                    </div>
+                </div>
+
+                <div class="countdown-workspace">
+                    <div class="glass-card element-margin text-center config-card">
+                        <h3>Select Exam Target Vector</h3>
+                        <div class="date-picker-row">
+                            <input type="date" id="examDatePicker" class="custom-date-input">
+                            <button class="btn btn-primary ripple" id="btnSaveExamDate"><i class="fa-solid fa-floppy-disk"></i> Lock Configuration</button>
+                        </div>
+                    </div>
+
+                    <!-- Clock Grid Components -->
+                    <div class="countdown-clock-grid" id="countdownClockGrid">
+                        <div class="clock-card glass-card">
+                            <span class="digits" id="cntDays">00</span>
+                            <span class="unit">Days</span>
+                        </div>
+                        <div class="clock-card glass-card">
+                            <span class="digits" id="cntHours">00</span>
+                            <span class="unit">Hours</span>
+                        </div>
+                        <div class="clock-card glass-card">
+                            <span class="digits" id="cntMinutes">00</span>
+                            <span class="unit">Minutes</span>
+                        </div>
+                        <div class="clock-card glass-card">
+                            <span class="digits" id="cntSeconds">00</span>
+                            <span class="unit">Seconds</span>
+                        </div>
+                    </div>
+
+                    <!-- Motivational Quotes Vector Engine Block -->
+                    <div class="glass-card quote-banner element-margin">
+                        <i class="fa-solid fa-quote-left quote-icon-glow"></i>
+                        <p class="quote-text" id="motivationalQuoteDisplay">"The systemized structure of preparation eliminates the element of chance."</p>
+                        <span class="quote-author" id="motivationalAuthor">— System Engine Framework</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dynamic View: Settings Configuration Panel -->
+            <section id="settings-view" class="app-view">
+                <div class="view-header">
+                    <div>
+                        <h2>System Control Settings</h2>
+                        <p>Configure operational limits and interface visual matrices.</p>
+                    </div>
+                </div>
+
+                <div class="settings-container">
+                    <div class="glass-card element-margin">
+                        <h3><i class="fa-solid fa-palette"></i> Interface Presentation Settings</h3>
+                        <div class="setting-row">
+                            <div class="setting-info">
+                                <label>Luminance Color Theme Mode</label>
+                                <p>Switch between default low-light glow layout or bright luminance matrices.</p>
+                            </div>
+                            <div class="setting-control">
+                                <div class="segmented-control" id="themeSelector">
+                                    <button class="seg-btn active" data-theme="dark"><i class="fa-solid fa-moon"></i> Dark Glow</button>
+                                    <button class="seg-btn" data-theme="light"><i class="fa-solid fa-sun"></i> High Light</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="setting-row">
+                            <div class="setting-info">
+                                <label>System Localization Language</label>
+                                <p>Adjust system text presentation strings.</p>
+                            </div>
+                            <div class="setting-control">
+                                <select id="langSelector" class="custom-select">
+                                    <option value="en">English (US Edition)</option>
+                                    <option value="bn">বাংলা (Bengali Translation Mode)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card element-margin">
+                        <h3><i class="fa-solid fa-sliders"></i> Context Model Hyperparameters</h3>
+                        <div class="setting-row">
+                            <div class="setting-info">
+                                <label>AI Hyperparameter Temperature: <span id="lblTemp">0.4</span></label>
+                                <p>Higher values trigger high variance parsing, lower values optimize strict context tracking extraction rules.</p>
+                            </div>
+                            <div class="setting-control wide-control">
+                                <input type="range" id="sliderTemperature" min="0.0" max="1.0" step="0.1" value="0.4" class="custom-slider">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card edge-action-box">
+                        <h3>Clear Persistent Memory Cache</h3>
+                        <p class="subtitle-text">Clears all processed structural files, saved calendars, and cached metrics from browser localStorage variables.</p>
+                        <button class="btn btn-danger element-margin ripple" id="btnWipeCache"><i class="fa-solid fa-triangle-exclamation"></i> Purge All App State Cache Data</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Scroll-To-Top Dynamic Element Button -->
+    <button class="scroll-top-btn" id="scrollTopBtn"><i class="fa-solid fa-chevron-up"></i></button>
+
+    <!-- Project JavaScript Application Script Entry Layers -->
+    <script src="js/script.js"></script>
+</body>
+</html>
