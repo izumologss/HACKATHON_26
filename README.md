@@ -2,7 +2,7 @@
 
 <div align="center">
 
-# 🚨 Anti-Kuddu Protocol Hub
+# 🚨 Anti-Kuddus Protocol Hub
 
 ### 🏆 Hackathon 2026 Project
 
@@ -24,7 +24,7 @@
 
 # 📖 Overview
 
-**Anti-Kuddu Protocol Hub** is a centralized dashboard connecting **six independent modules**, each solving a different real-world campus problem.
+**Anti-Kuddus Protocol Hub** is a centralized dashboard connecting **six independent modules**, each solving a different real-world campus problem.
 
 Rather than building one massive application, every module works as a **standalone mini application**, allowing each feature to be developed, tested, and maintained independently while remaining accessible from one unified landing page.
 
@@ -94,10 +94,7 @@ HACKATHON_26/
 │
 ├── css/
 │
-├── js/
-│
-└── docs/
-    └── screenshots/
+└── js/
 ```
 
 ---
@@ -134,69 +131,19 @@ These trade-offs were intentionally chosen to maximize development speed and del
 ## 📋 Prerequisites
 
 - Git
-- VS Code (Recommended)
-- Live Server Extension (Recommended)
+- VS Code 
+- Live Server Extension 
 - Any modern browser
 
 ---
 
-## 1️⃣ Clone Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/izumologss/HACKATHON_26.git
 
 cd HACKATHON_26
 ```
-
----
-
-## 2️⃣ Run Locally
-
-### Option A (Recommended)
-
-Using **VS Code Live Server**
-
-1. Open the project folder.
-2. Right-click **index.html**
-3. Click **Open with Live Server**
-
-Project will open at
-
-```
-http://127.0.0.1:5500/
-```
-
----
-
-### Option B
-
-Python Server
-
-```bash
-python3 -m http.server 8000
-```
-
-Visit
-
-```
-http://localhost:8000
-```
-
----
-
-### Option C
-
-Simply open
-
-```
-index.html
-```
-
-directly in your browser.
-
-> **Note:** Some browser security restrictions may prevent local JSON or API requests when opening files directly. Live Server is recommended.
-
----
 
 # 🧭 Module Navigation
 
@@ -215,68 +162,6 @@ Each module can also be accessed individually.
 
 /fact-checker/
 ```
-
----
-
-# 🖼️ UI Screenshots
-
-> Replace the images below with your own screenshots before submission.
-
-## 🏠 Hub Landing Page
-
-```md
-![Hub](docs/screenshots/hub.png)
-```
-
----
-
-## 🕵️ Anonymous Whistleblower
-
-```md
-![Whistleblower](docs/screenshots/whistleblower.png)
-```
-
----
-
-## 🪑 Seat Planner Matrix
-
-```md
-![Seat Planner](docs/screenshots/seat-planner.png)
-```
-
----
-
-## 📚 Syllabus Negotiator
-
-```md
-![Syllabus](docs/screenshots/syllabus-negotiator.png)
-```
-
----
-
-## 💰 Corrupt Economy Trace
-
-```md
-![Corrupt Economy](docs/screenshots/corrupt-economy.png)
-```
-
----
-
-## 🚨 SOS Rescue Flare
-
-```md
-![SOS](docs/screenshots/sos.png)
-```
-
----
-
-## ✅ Fact Checker Engine
-
-```md
-![Fact Checker](docs/screenshots/fact-checker.png)
-```
-
----
 
 # 💡 Design Philosophy
 
@@ -309,6 +194,7 @@ Simply push changes to the repository, and GitHub Pages serves the project direc
 ### Hackathon 2026
 
 *"Building technology for a safer and smarter campus."*
+*"Got 99 problems, and ‘loose screws’ are definitely one of them.”*
 
 </div>
 
