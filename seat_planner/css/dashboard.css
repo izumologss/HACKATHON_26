@@ -1,0 +1,96 @@
+/* Core Navigation Layout dashboard split shell grid frames configurations mapping structural rules profiles */
+.dashboard-shell-root {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: 100vh;
+}
+
+/* Sidebar Navigation Panels configuration parameters variables setup layout rules designs elements templates specs */
+.dashboard-sidebar-navigation {
+    background: rgba(8, 11, 24, 0.6);
+    border-right: 1px solid var(--border-glass-profile);
+    backdrop-filter: blur(20px);
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition-linear);
+}
+
+.sidebar-branding { font-size: 1.3rem; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 3.5rem; }
+.sidebar-branding span { color: var(--text-secondary-muted); font-size: 0.85rem; font-weight: 400; }
+
+.sidebar-menu-list { list-style: none; }
+.sidebar-menu-list li { margin-bottom: 0.75rem; }
+
+.sidebar-menu-list a {
+    display: flex; align-items: center; gap: 1rem; padding: 0.75rem 1rem; color: var(--text-secondary-muted); text-decoration: none; border-radius: 8px; font-size: 0.9rem; transition: var(--transition-linear);
+}
+
+.sidebar-menu-list li.active-node a, .sidebar-menu-list a:hover {
+    background: rgba(255,255,255,0.02); color: #fff; border-left: 3px solid var(--cyber-blue); padding-left: calc(1rem - 3px);
+}
+
+.session-terminate-trigger { color: #ef4444 !important; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; }
+
+/* Workstation main view pane layout setup options variables dimensions styles architectures definitions mapping */
+.dashboard-workspace-viewport { display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+
+.dashboard-top-navigation-bar {
+    height: 70px; border-bottom: 1px solid var(--border-glass-profile); display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; background: rgba(8,11,24,0.2);
+}
+
+.mobile-sidebar-toggle-btn { display: none; background: transparent; border: none; color: #fff; font-size: 1.2rem; cursor: pointer; }
+
+.live-system-status-pill { display: flex; align-items: center; gap: 0.6rem; font-size: 0.8rem; background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.35rem 0.8rem; border-radius: 50px; color: #10b981; font-weight: 500; }
+.pulse-indicator-dot { width: 6px; height: 6px; background: #10b981; border-radius: 50%; display: inline-block; animation: dotPulse 1.5s infinite alternate; }
+@keyframes dotPulse { from { opacity: 0.4; transform: scale(0.9); } to { opacity: 1; transform: scale(1.2); } }
+
+.dashboard-scrollable-inner-content { padding: 2.5rem; overflow-y: auto; flex: 1; display: flex; flex-direction: column; gap: 2.5rem; }
+
+/* Status Aggregations Grid Boxes parsing configurations layouts parameters styles architectures maps sets options */
+.aggregation-summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+.stat-summary-card { padding: 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+
+.card-meta-text span { font-size: 0.75rem; color: var(--text-secondary-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.card-meta-text h2 { font-size: 1.6rem; font-weight: 600; margin-top: 0.25rem; }
+
+.icon-metric { font-size: 1.5rem; padding: 0.75rem; border-radius: 10px; background: rgba(255,255,255,0.02); }
+.color-blue { color: var(--cyber-blue); }
+.color-purple { color: var(--cyber-purple); }
+.color-green { color: #10b981; }
+.color-yellow { color: #f59e0b; }
+
+/* Charts & Distribution Panels mock vector blocks components grids models details configurations code mapping properties */
+.dashboard-split-data-row { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2.5rem; }
+.visual-analytics-panel { padding: 2rem; }
+.visual-analytics-panel h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem; }
+.panel-context-desc { font-size: 0.8rem; color: var(--text-secondary-muted); margin-bottom: 2rem; }
+
+.mock-chart-bar-scaffold { display: flex; flex-direction: column; gap: 1.25rem; }
+.chart-bar-element { display: flex; align-items: center; gap: 1rem; font-size: 0.8rem; }
+.bar-label-tag { width: 90px; color: var(--text-secondary-muted); }
+.bar-track-path { flex: 1; height: 6px; background: rgba(255,255,255,0.04); border-radius: 3px; overflow: hidden; }
+.bar-fill-indicator { height: 100%; background: linear-gradient(90deg, var(--cyber-blue), var(--cyber-purple)); border-radius: 3px; }
+.bar-value-percentage { width: 30px; text-align: right; font-weight: 500; }
+
+/* Radial Circular Layout Progress Elements gauges frameworks styles layouts mapping parameters details widgets code */
+.configuration-status-flex { display: flex; flex-direction: column; justify-content: space-between; }
+.radial-gauge-flex-wrapper { display: flex; align-items: center; gap: 2rem; margin-top: 1.5rem; }
+
+.circular-progress-svg-container { position: relative; width: 140px; height: 140px; }
+.gauge-fill-path { transform: rotate(-90deg); transform-origin: 50% 50%; }
+.gauge-raw-value-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 1.5rem; font-weight: 700; color: #fff; font-family: monospace; }
+
+.gauge-context-legends p { font-size: 0.8rem; color: var(--text-secondary-muted); margin-top: 0.6rem; line-height: 1.5; }
+.badge-status-pill { display: inline-block; padding: 0.25rem 0.65rem; border-radius: 50px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; }
+.green-accent-pill { background: rgba(16, 185, 129, 0.12); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2); }
+
+/* Responsive adjustments layers parsing boundaries setups models options sizes dimensions configurations */
+@media (max-width: 1024px) {
+    .dashboard-shell-root { grid-template-columns: 1fr; }
+    .dashboard-sidebar-navigation { position: fixed; top: 0; left: -260px; height: 100vh; width: 260px; z-index: 999; }
+    .dashboard-sidebar-navigation.open { left: 0; }
+    .mobile-sidebar-toggle-btn { display: block; }
+    .dashboard-split-data-row { grid-template-columns: 1fr; }
+}

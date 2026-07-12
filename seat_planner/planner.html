@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workspace Matrix - CamoShield Seating Planner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/planner.css">
+</head>
+<body>
+    <div class="space-bg"></div>
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <div class="workspace-layout-root">
+        <aside class="glass-card control-workspace-sidebar">
+            <div class="sidebar-brand-header">
+                <a href="index.html" class="brand-logo"><i class="fa-solid fa-layer-group"></i> CAMO<span>PLAN</span></a>
+            </div>
+
+            <section class="configuration-card-section">
+                <h3>Add Student Record</h3>
+                <form id="studentEntryForm" class="control-form-element" autocomplete="off">
+                    <div class="input-element-row">
+                        <label for="stdName">Full Name</label>
+                        <input type="text" id="stdName" placeholder="e.g., Alex Mercer" required>
+                    </div>
+                    <div class="input-element-group-split">
+                        <div class="input-element-row">
+                            <label for="stdRoll">Roll ID</label>
+                            <input type="text" id="stdRoll" placeholder="101" required>
+                        </div>
+                        <div class="input-element-row">
+                            <label for="stdHeight">Height (cm)</label>
+                            <input type="number" id="stdHeight" placeholder="165" min="100" max="250" required>
+                        </div>
+                    </div>
+                    <div class="input-element-row">
+                        <label>Accessibility & Seating Constraints</label>
+                        <div class="checkbox-flex-matrix">
+                            <label class="custom-checkbox-wrapper">
+                                <input type="checkbox" id="checkVision">
+                                <span class="indicator-box"></span> Vision Impaired
+                            </label>
+                            <label class="custom-checkbox-wrapper">
+                                <input type="checkbox" id="checkReserved">
+                                <span class="indicator-box"></span> Reserve Front Row
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Commit Student Log</button>
+                </form>
+            </section>
+
+            <div class="system-io-row">
+                <button class="btn btn-outline" id="btnImportCSV"><i class="fa-solid fa-file-import"></i> Import CSV</button>
+                <button class="btn btn-outline" id="btnExportCSV"><i class="fa-solid fa-file-export"></i> Export CSV</button>
+            </div>
+        </aside>
+
+        <main class="spatial-canvas-view">
+            <header class="canvas-action-nav">
+                <div class="canvas-title-meta">
+                    <h2>Classroom Seating Grid Sandbox</h2>
+                    <p>Toggle grid states directly to mark structural assets or configure layout blocks.</p>
+                </div>
+                <div class="canvas-utility-actions">
+                    <button class="btn btn-outline" id="btnResetGrid"><i class="fa-solid fa-arrow-rotate-left"></i> Reset Layout</button>
+                    <button class="btn btn-primary btn-glow" id="btnOptimizeSeating"><i class="fa-solid fa-wand-magic-sparkles"></i> Compute Optimal Layout</button>
+                </div>
+            </header>
+
+            <div class="glass-card legend-row-display">
+                <div class="legend-item"><span class="legend-color-dot color-teacher"></span> Instructor Desk</div>
+                <div class="legend-item"><span class="legend-color-dot color-empty"></span> Available Node</div>
+                <div class="legend-item"><span class="legend-color-dot color-blocked"></span> Blocked/Broken Desk</div>
+                <div class="legend-item"><span class="legend-color-dot color-reserved"></span> Reserved Constraint</div>
+                <div class="legend-item"><span class="legend-color-dot color-assigned"></span> Active Student Map</div>
+            </div>
+
+            <div class="glass-card spatial-interactive-grid-container">
+                <div class="instructor-station-banner">INSTRUCTOR PLACEMENT BOUNDARY LINE</div>
+                
+                <div class="classroom-grid-layout-engine" id="classroomGridViewport">
+                    </div>
+            </div>
+
+            <div class="glass-card student-registry-table-panel">
+                <div class="table-action-header">
+                    <h3>Registered Student Records Directory</h3>
+                    <input type="text" id="tableSearchField" class="table-search-input" placeholder="Search registry records...">
+                </div>
+                <div class="table-scroller">
+                    <table class="registry-data-matrix">
+                        <thead>
+                            <tr>
+                                <th>Roll ID</th>
+                                <th>Student Name</th>
+                                <th>Height Mapping</th>
+                                <th>Special Profile Rules</th>
+                                <th class="text-right">Action Matrix</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentRecordsTableBody">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="toast-system-notification hidden" id="toastNotification">Notification Payload</div>
+
+    <script src="js/script.js"></script>
+    <script src="js/planner.js"></script>
+</body>
+</html>

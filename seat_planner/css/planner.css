@@ -1,0 +1,154 @@
+/* Structural grid architecture parsing properties variables setups elements layouts */
+.workspace-layout-root {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    min-height: 100vh;
+    padding-top: 0;
+}
+
+/* Sidebar Input Control Area properties processing setups layers settings elements mapping shapes profiles */
+.control-workspace-sidebar {
+    border-radius: 0;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba(8, 11, 24, 0.5);
+}
+
+.sidebar-brand-header { margin-bottom: 2.5rem; }
+
+.configuration-card-section h3 { font-size: 1.1rem; margin-bottom: 1.5rem; font-weight: 600; letter-spacing: 0.5px; }
+
+/* Modular Form Styling Base rules setup config components elements details structures */
+.control-form-element { display: flex; flex-direction: column; gap: 1.25rem; }
+.input-element-row { display: flex; flex-direction: column; gap: 0.4rem; }
+.input-element-row label { font-size: 0.8rem; color: var(--text-secondary-muted); font-weight: 500; }
+
+.input-element-row input, .table-search-input {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-glass-profile);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    color: #fff;
+    font-family: var(--font-stack);
+    font-size: 0.9rem;
+    transition: var(--transition-linear);
+}
+
+.input-element-row input:focus, .table-search-input:focus {
+    outline: none; border-color: var(--cyber-blue); box-shadow: 0 0 10px rgba(0, 242, 254, 0.15); background: rgba(255,255,255,0.04);
+}
+
+.input-element-group-split { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+/* Custom Checkbox elements processing setups configurations profiles widgets mapping models details */
+.checkbox-flex-matrix { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 0.25rem; }
+
+.custom-checkbox-wrapper {
+    display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; color: var(--text-secondary-muted); cursor: pointer; user-select: none;
+}
+
+.custom-checkbox-wrapper input { display: none; }
+.indicator-box { width: 18px; height: 18px; border: 1px solid var(--border-glass-profile); border-radius: 4px; background: rgba(255,255,255,0.02); display: inline-block; position: relative; transition: var(--transition-linear); }
+.custom-checkbox-wrapper input:checked + .indicator-box { background: var(--cyber-blue); border-color: var(--cyber-blue); }
+.custom-checkbox-wrapper input:checked + .indicator-box::after { content: "\f00c"; font-family: "Font Awesome 6 Free"; font-weight: 900; font-size: 0.65rem; color: #000; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.system-io-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-top: 2rem; }
+.system-io-row .btn { padding: 0.5rem; font-size: 0.8rem; }
+
+/* Main Spatial Canvas Area Spaces parsing layouts config structural rules */
+.spatial-canvas-view { padding: 2.5rem; overflow-y: auto; height: 100vh; display: flex; flex-direction: column; gap: 2rem; }
+.canvas-action-nav { display: flex; justify-content: space-between; align-items: center; }
+.canvas-title-meta h2 { font-size: 1.5rem; font-weight: 600; }
+.canvas-title-meta p { font-size: 0.85rem; color: var(--text-secondary-muted); }
+.canvas-utility-actions { display: flex; gap: 1rem; }
+
+/* Legend Elements rows configs models design rules styles specifications */
+.legend-row-display { padding: 1rem 1.5rem; display: flex; flex-wrap: wrap; gap: 1.5rem; border-radius: 12px; }
+.legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--text-secondary-muted); }
+.legend-color-dot { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.color-teacher { background: #334155; border: 1px dashed rgba(255,255,255,0.3); }
+.color-empty { background: rgba(255,255,255,0.02); border: 1px solid var(--border-glass-profile); }
+.color-blocked { background: rgba(239, 68, 68, 0.15); border: 1px solid #ef4444; }
+.color-reserved { background: rgba(16, 185, 129, 0.15); border: 1px solid #10b981; }
+.color-assigned { background: linear-gradient(135deg, rgba(0, 242, 254, 0.2) 0%, rgba(157, 78, 221, 0.2) 100%); border: 1px solid var(--cyber-blue); }
+
+/* Seating Map Interactive Grid Panel Layout Element configurations dimensions elements parsing rules details setup mapping options */
+.spatial-interactive-grid-container { padding: 2rem; text-align: center; }
+.instructor-station-banner { background: #1e293b; border: 1px dashed rgba(255,255,255,0.15); padding: 0.6rem; border-radius: 8px; font-size: 0.75rem; font-weight: 600; letter-spacing: 1px; color: var(--text-secondary-muted); margin-bottom: 2.5rem; }
+
+.classroom-grid-layout-engine {
+    display: grid; grid-template-columns: repeat(8, 1fr); gap: 1rem; justify-content: center;
+}
+
+/* Individual Cell Matrix Modules layouts parameters configurations elements sizes mappings shapes models properties dimensions specs */
+.grid-seat-node {
+    min-height: 80px; border-radius: 10px; background: rgba(255,255,255,0.01); border: 1px solid var(--border-glass-profile); padding: 0.6rem; display: flex; flex-direction: column; justify-content: space-between; text-align: left; cursor: pointer; transition: var(--transition-linear); position: relative;
+}
+.grid-seat-node:hover { transform: scale(1.03); border-color: rgba(255,255,255,0.2); }
+
+.seat-index-number { font-size: 0.7rem; color: var(--text-secondary-muted); font-family: monospace; }
+.seat-main-content-area { display: flex; flex-direction: column; gap: 0.2rem; margin: 0.4rem 0; text-align: center; justify-content: center; align-items: center; }
+.seat-student-name { font-size: 0.8rem; font-weight: 500; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; max-width: 100px; }
+.seat-student-height-tag { font-size: 0.7rem; color: var(--cyber-blue); font-weight: 600; }
+
+/* Status Node Constraint Overlays Modifiers states configurations details designs rules */
+.seat-state-blocked { background: rgba(239, 68, 68, 0.08); border-color: rgba(239, 68, 68, 0.3); color: #ef4444; }
+.seat-state-blocked .seat-main-content-area::after { content: "BLOCKED"; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.5px; }
+
+.seat-state-reserved { background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.3); }
+.seat-state-reserved .seat-index-number { color: #10b981; }
+
+.seat-state-occupied {
+    background: linear-gradient(135deg, rgba(0, 242, 254, 0.06) 0%, rgba(157, 78, 221, 0.06) 100%); border-color: rgba(0, 242, 254, 0.3); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.seat-state-occupied.vision-issue { border-color: #f59e0b; }
+.seat-state-occupied.vision-issue .seat-student-height-tag { color: #f59e0b; }
+
+/* Visibility Colored Ray Tracing Indicators Overlays design rules layout mapping indicators properties */
+.visibility-ray-indicator { width: 6px; height: 6px; border-radius: 50%; position: absolute; top: 8px; right: 8px; }
+.ray-clear { background: #10b981; box-shadow: 0 0 8px #10b981; }
+.ray-partial { background: #f59e0b; box-shadow: 0 0 8px #f59e0b; }
+.ray-blocked { background: #ef4444; box-shadow: 0 0 8px #ef4444; }
+
+/* Grid Processing Calculation Visual Keyframes Trigger States layout models rules animations */
+.grid-computing-animate .grid-seat-node { animation: nodeFlash Processing Speed 0.5s ease infinite alternate; }
+@keyframes nodeFlash { from { border-color: var(--border-glass-profile); } to { border-color: var(--cyber-blue); } }
+
+/* Registry Database Table View styling parameters definitions details structures layout models components */
+.student-registry-table-panel { padding: 2rem; margin-top: 1rem; }
+.table-action-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+.table-search-input { width: 250px; padding: 0.5rem 1rem; font-size: 0.85rem; }
+
+.table-scroller { overflow-x: auto; width: 100%; }
+.registry-data-matrix { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.85rem; }
+.registry-data-matrix th { padding: 1rem; border-bottom: 1px solid var(--border-glass-profile); color: var(--text-secondary-muted); font-weight: 500; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.5px; }
+.registry-data-matrix td { padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.02); vertical-align: middle; }
+
+.constraint-tag-pill { background: rgba(255,255,255,0.04); border: 1px solid var(--border-glass-profile); padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.75rem; color: var(--text-secondary-muted); }
+.constraint-tag-pill.alert-pill { background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+
+.action-trigger-btn { background: transparent; border: 1px solid transparent; color: var(--text-secondary-muted); width: 28px; height: 28px; border-radius: 4px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; transition: var(--transition-linear); }
+.action-trigger-btn:hover { border-color: var(--border-glass-profile); color: #fff; }
+.btn-delete-record:hover { color: #ef4444; border-color: rgba(239, 68, 68, 0.2); }
+
+.text-right { text-align: right; }
+
+/* Floating Universal Alert System Elements Notifications layouts designs blocks definitions structures models */
+.toast-system-notification { position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%) translateY(0); padding: 0.8rem 2rem; background: rgba(12, 18, 38, 0.9); border: 1px solid var(--cyber-blue); backdrop-filter: blur(8px); border-radius: 8px; font-size: 0.9rem; color: #fff; z-index: 10000; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: opacity 0.3s, transform 0.3s; opacity: 1; }
+.toast-system-notification.hidden { opacity: 0; transform: translateX(-50%) translateY(15px); pointer-events: none; }
+
+/* Responsive adjustments for mid size tablets screens dimensions fixes spaces maps boundaries layout templates adjustments */
+@media (max-width: 1024px) {
+    .workspace-layout-root { grid-template-columns: 1fr; }
+    .control-workspace-sidebar { border-right: none; border-bottom: 1px solid var(--border-glass-profile); }
+    .classroom-grid-layout-engine { grid-template-columns: repeat(6, 1fr); }
+}
+
+@media (max-width: 640px) {
+    .classroom-grid-layout-engine { grid-template-columns: repeat(4, 1fr); }
+}

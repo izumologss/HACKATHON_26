@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engine Settings - CamoShield</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/planner.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="space-bg"></div>
+    <div class="dashboard-shell-root">
+        <aside class="dashboard-sidebar-navigation">
+            <div class="sidebar-branding"><i class="fa-solid fa-layer-group text-gradient"></i> CORE<span>SYS</span></div>
+            <ul class="sidebar-menu-list">
+                <li><a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard Hub</a></li>
+                <li><a href="planner.html"><i class="fa-solid fa-border-all"></i> Workspace Planner</a></li>
+                <li><a href="report.html"><i class="fa-solid fa-file-invoice"></i> System Reports</a></li>
+                <li class="active-node"><a href="settings.html"><i class="fa-solid fa-sliders"></i> Engine Settings</a></li>
+            </ul>
+        </aside>
+
+        <main class="dashboard-workspace-viewport" style="padding: 2.5rem; overflow-y: auto;">
+            <h2>Optimization Engine Settings</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Adjust calculation thresholds and spatial environment array properties.</p>
+
+            <div class="glass-card" style="padding: 2.5rem; max-width: 600px;">
+                <div class="control-form-element">
+                    <div class="input-element-row">
+                        <label for="gridColsSetting">Standard Layout Columns Matrix Width</label>
+                        <select id="gridColsSetting" style="background:#0d1326; color:#fff; padding:0.8rem; border:1px solid var(--border-glass); border-radius:8px; width:100%;">
+                            <option value="6">6 Columns Workspace</option>
+                            <option value="8" selected>8 Columns Workspace</option>
+                            <option value="10">10 Columns Workspace</option>
+                        </select>
+                    </div>
+                    <div class="input-element-row">
+                        <label for="engineSpeed">Ray-Tracing Realtime Animation Velocity</label>
+                        <select id="engineSpeed" style="background:#0d1326; color:#fff; padding:0.8rem; border:1px solid var(--border-glass); border-radius:8px; width:100%;">
+                            <option value="Fast">Optimized Instantaneous</option>
+                            <option value="Normal" selected>Visualized Stepped Sequences</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" onclick="alert('Configuration variables committed successfully into runtime memory indices.')">Apply Matrix Parameters</button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

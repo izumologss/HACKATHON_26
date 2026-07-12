@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission 2 - Anti-Camouflage Seat Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="space-bg" id="particleBase"></div>
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <a href="index.html" class="brand-logo">
+                <i class="fa-solid fa-layer-group logo-gradient"></i> CAMO<span>SHIELD</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">Ecosystem Features</a>
+                <a href="planner.html" class="btn btn-outline">Seat Planner Workspace</a>
+                <a href="dashboard.html" class="btn btn-primary btn-glow">Analytics Terminal</a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-container">
+            <div class="hero-text-block">
+                <div class="pill-badge"><span>Algorithm Engine Phase v2.4</span></div>
+                <h1>Anti-Camouflage <span class="gradient-text-accent">Seat Planner</span></h1>
+                <p class="hero-subtitle">An intelligent classroom seating optimization engine designed to dynamically map student heights and operational profiles—guaranteeing continuous visibility parameters.</p>
+                
+                <div class="hero-actions">
+                    <a href="planner.html" class="btn btn-primary btn-glow">Start Spatial Planning</a>
+                    <a href="dashboard.html" class="btn btn-outline">View Core Analytics</a>
+                </div>
+
+                <div class="metrics-strip">
+                    <div class="metric-node">
+                        <h3 class="counter-val" data-target="12500">0</h3>
+                        <p>Desks Mapped</p>
+                    </div>
+                    <div class="metric-node">
+                        <h3 class="counter-val" data-target="420">0</h3>
+                        <p>Optimized Layouts</p>
+                    </div>
+                    <div class="metric-node">
+                        <h3 class="counter-val" data-target="99">0</h3>
+                        <p>Sightline Accuracy %</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-interactive-graphic">
+                <div class="graphic-canvas-wrapper">
+                    <div class="floating-orb-accent purple-orb"></div>
+                    <div class="floating-orb-accent blue-orb"></div>
+                    <div class="glass-card classroom-mock-shield">
+                        <div class="mock-teacher-station">Instructor Position Array</div>
+                        <div class="mock-grid-display">
+                            <div class="mock-desk active-visible"><i class="fa-solid fa-user"></i></div>
+                            <div class="mock-desk active-visible"><i class="fa-solid fa-user"></i></div>
+                            <div class="mock-desk disabled-blocked"><i class="fa-solid fa-ban"></i></div>
+                            <div class="mock-desk active-visible"><i class="fa-solid fa-user"></i></div>
+                        </div>
+                        <span class="status-feed-badge"><i class="fa-solid fa-circle-check"></i> Ray-Traced Sightlines Operational</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features-block">
+        <div class="block-header">
+            <h2>Algorithmic Spatial Optimization</h2>
+            <p>Advanced parameters configured out-of-the-box to eliminate instructional line-of-sight occlusion.</p>
+        </div>
+        <div class="features-grid-layout">
+            <div class="glass-card feature-node-card">
+                <i class="fa-solid fa-address-book element-accent-icon"></i>
+                <h3>Student Management Matrix</h3>
+                <p>Track student profiles complete with height parameters, roll identifiers, and structural constraint attributes.</p>
+            </div>
+            <div class="glass-card feature-node-card">
+                <i class="fa-solid fa-arrow-down-short-wide element-accent-icon"></i>
+                <h3>Automated Array Sorting</h3>
+                <p>Iterative sorting matrices algorithmically shift student configurations across spatial coordinates seamlessly.</p>
+            </div>
+            <div class="glass-card feature-node-card">
+                <i class="fa-solid fa-braille element-accent-icon"></i>
+                <h3>Smart Grid Seating</h3>
+                <p>Instantly maps dynamic structures matching localized room layout column limits and geometric boundaries.</p>
+            </div>
+            <div class="glass-card feature-node-card">
+                <i class="fa-solid fa-eye element-accent-icon"></i>
+                <h3>Line-of-Sight Visibility</h3>
+                <p>Employs localized geometric evaluations ensuring instructors experience zero field-of-view interference.</p>
+            </div>
+            <div class="glass-card feature-node-card">
+                <i class="fa-solid fa-sliders element-accent-icon"></i>
+                <h3>Dynamic Seating Constraints</h3>
+                <p>Support unique requirements like visual impairments, broken structural assets, and reserved desks.</p>
+            </div>
+            <div class="glass-card feature-node-card">
+                <i class="fa-solid fa-network-wired element-accent-icon"></i>
+                <h3>Interactive Environment Map</h3>
+                <p>Manipulate operational properties of desk nodes in real time via an interactive layout configuration portal.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="system-footer-root">
+        <div class="footer-layout-wrapper">
+            <div class="brand-summary">
+                <a href="#" class="brand-logo"><i class="fa-solid fa-layer-group"></i> CAMO<span>SHIELD</span></a>
+                <p>Enterprise layout management framework designed for tracking institutional spatial assets elegantly.</p>
+            </div>
+            <div class="footer-nav-columns">
+                <div class="link-directory">
+                    <h4>Ecosystem Hub</h4>
+                    <a href="planner.html">Spatial Map Tool</a>
+                    <a href="dashboard.html">Analytics Interface</a>
+                    <a href="report.html">Data Exports</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-attribution-row">
+            <p>&copy; 2026 CamoShield Space Management Matrix. Architected natively with care.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top-widget" id="scrollTopBtn" aria-label="Scroll back to top matrix location"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
