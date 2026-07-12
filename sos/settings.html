@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Settings - SOS Flare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="particle-system-bg"></div>
+    <div class="custom-tactical-cursor" id="customCursor"></div>
+
+    <div class="command-center-root-shell">
+        <aside class="command-center-sidebar-wrapper">
+            <div class="sidebar-brand-node"><i class="fa-solid fa-satellite-dish text-danger-accent"></i> COMMAND<span>PANEL</span></div>
+            <ul class="sidebar-navigation-menu-links">
+                <li><a href="dashboard.html"><i class="fa-solid fa-headset"></i> Live Terminal</a></li>
+                <li><a href="history.html"><i class="fa-solid fa-clock-rotate-left"></i> Signal Archives</a></li>
+                <li><a href="analytics.html"><i class="fa-solid fa-chart-line"></i> Metrics Sandbox</a></li>
+                <li class="active-menu-node"><a href="settings.html"><i class="fa-solid fa-sliders"></i> Configuration</a></li>
+                <li style="margin-top:auto;"><a href="index.html" style="color:var(--danger-red);"><i class="fa-solid fa-power-off"></i> Disconnect Node</a></li>
+            </ul>
+        </aside>
+
+        <main class="command-workspace-viewport" style="padding:2.5rem; overflow-y:auto;">
+            <h2>Volatile Encryption Node Adjustments</h2>
+            <p style="color:var(--text-secondary-muted); margin-bottom:2rem;">Manage active themes, modify hardware tracking parameters, and flush device storage allocations safely.</p>
+
+            <div class="glass-morphic-panel" style="padding:2.5rem; max-width:600px;">
+                <div class="tactical-form-blueprint">
+                    <div class="input-element-block">
+                        <label for="settingsActiveFrameworkTheme">Active Command Framework Interface Mode</label>
+                        <select id="settingsActiveFrameworkTheme" style="background:#0b1120; border:1px solid var(--border-glass-profile); border-radius:8px; padding:0.75rem; color:#fff; width:100%;">
+                            <option value="cyber-dark" selected>Tactical Cyber Darkness Mode (Enforced)</option>
+                            <option value="high-contrast-light">Stark Light Visual Protocol Vector</option>
+                        </select>
+                    </div>
+                    <div class="input-element-block" style="margin-top:2rem;">
+                        <label>Hardware Cache Management Purge Protocols</label>
+                        <button type="button" class="tactical-btn" style="border:1px solid var(--danger-red); color:var(--danger-red); background:rgba(239,68,68,0.03); margin-top:0.5rem;" onclick="if(confirm('Flush device application memory cache indexes? All current local tracking entries will be wiped.')) { localStorage.clear(); alert('Volatile application index buffers successfully purged.'); window.location.reload(); }">Flush Global Device LocalStorage Matrix</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

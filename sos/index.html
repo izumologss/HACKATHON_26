@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS Rescue Flare - Emergency Command Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="particle-system-bg" id="particleBg"></div>
+    <div class="custom-tactical-cursor" id="customCursor"></div>
+
+    <nav class="tactical-navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand-identity">
+                <i class="fa-solid fa-satellite-dish flare-pulse-glow"></i> SOS<span>FLARE</span>
+            </a>
+            <div class="nav-links-cluster">
+                <a href="#features-anchor">Subsystems</a>
+                <a href="sos.html" class="tactical-btn btn-danger-glow"><i class="fa-solid fa-radiation"></i> Signal SOS</a>
+                <a href="dashboard.html" class="tactical-btn btn-primary-glass">Access Command Center</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="tactical-hero-viewport">
+        <div class="hero-grid-structure">
+            <div class="hero-telemetry-text">
+                <div class="security-clearance-badge"><span>Security Clearance: Level 1 Enforced</span></div>
+                <h1>Mission 5: <span class="accent-gradient-text">SOS Rescue Flare</span></h1>
+                <h2>Emergency Student Protection Platform</h2>
+                <p class="hero-mission-desc">Instantly broadcast cryptographic distress signals to active student leaders. Safeguard peer networks from bullying, extortion, and systemic harassment with real-time positional telemetry mapping logs.</p>
+                
+                <div class="hero-action-row">
+                    <a href="sos.html" class="tactical-btn btn-danger-glow massive-cta">Send Instant SOS Flare</a>
+                    <a href="dashboard.html" class="tactical-btn btn-outline-glass">Deploy Live Dashboard</a>
+                </div>
+
+                <div class="telemetry-metrics-strip">
+                    <div class="metric-glass-node">
+                        <h3 class="counter-engine" data-target="1402">0</h3>
+                        <p>Flares Broadcasted</p>
+                    </div>
+                    <div class="metric-glass-node">
+                        <h3 class="counter-engine" data-target="99">0</h3>
+                        <p>Resolution Rate (%)</p>
+                    </div>
+                    <div class="metric-glass-node">
+                        <h3 class="counter-engine" data-target="45">0</h3>
+                        <p>Response Latency (s)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-graphic-isometric">
+                <div class="beacon-canvas-container">
+                    <div class="spatial-gradient-wave wave-alpha"></div>
+                    <div class="spatial-gradient-wave wave-beta"></div>
+                    <div class="glass-morphic-panel beacon-mock-terminal">
+                        <div class="terminal-status-header">
+                            <span class="status-indicator-led red-led"></span>
+                            <span>CRITICAL TELEMETRY LINK</span>
+                        </div>
+                        <div class="beacon-alert-feed-box">
+                            <div class="mock-alert-row high-priority">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                <div>
+                                    <h4>Bullying Event Flagged</h4>
+                                    <p>Zone: Corridor West [Sector 4]</p>
+                                </div>
+                            </div>
+                            <div class="mock-alert-row medium-priority">
+                                <i class="fa-solid fa-pizza-slice"></i>
+                                <div>
+                                    <h4>Tiffin Theft Logged</h4>
+                                    <p>Zone: Canteen Central [Sector 2]</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="anonymization-lock-status">
+                            <i class="fa-solid fa-user-secret"></i> AES-256 Identity Protection Mask Active
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features-anchor" class="tactical-features-block">
+        <div class="section-title-wrapper">
+            <h2>Command Module Subsystems</h2>
+            <p>Advanced cross-functional utilities built for modern responsive network monitoring operations.</p>
+        </div>
+        <div class="subsystems-glass-grid">
+            <div class="glass-morphic-panel feature-card-node">
+                <i class="fa-solid fa-fingerprint network-accent-icon icon-danger"></i>
+                <h3>One-Click SOS Matrix</h3>
+                <p>Broadcast layered encrypted payload protocols directly into the system data core instantly.</p>
+            </div>
+            <div class="glass-morphic-panel feature-card-node">
+                <i class="fa-solid fa-compass network-accent-icon icon-primary"></i>
+                <h3>Positional Tracking</h3>
+                <p>Map telemetry coordinate arrays inside architectural localized maps immediately.</p>
+            </div>
+            <div class="glass-morphic-panel feature-card-node">
+                <i class="fa-solid fa-circle-nodes network-accent-icon icon-warning"></i>
+                <h3>Offline Request Queue</h3>
+                <p>Ensures event logging buffers are safely cached within the local file system layer even without global internet paths.</p>
+            </div>
+            <div class="glass-morphic-panel feature-card-node">
+                <i class="fa-solid fa-mask network-accent-icon icon-success"></i>
+                <h3>Anonymity Array</h3>
+                <p>Complete cryptographical security masks protect student profiles using randomized algorithmic variables.</p>
+            </div>
+        </div>
+    </section>
+
+    <button class="scroll-to-top-widget" id="scrollTopWidget"><i class="fa-solid fa-angles-up"></i></button>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Station - SOS Flare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/analytics.css">
+</head>
+<body>
+    <div class="particle-system-bg"></div>
+    <div class="custom-tactical-cursor" id="customCursor"></div>
+
+    <div class="command-center-root-shell">
+        <aside class="command-center-sidebar-wrapper">
+            <div class="sidebar-brand-node"><i class="fa-solid fa-satellite-dish text-danger-accent"></i> COMMAND<span>PANEL</span></div>
+            <ul class="sidebar-navigation-menu-links">
+                <li><a href="dashboard.html"><i class="fa-solid fa-headset"></i> Live Terminal</a></li>
+                <li><a href="history.html"><i class="fa-solid fa-clock-rotate-left"></i> Signal Archives</a></li>
+                <li class="active-menu-node"><a href="analytics.html"><i class="fa-solid fa-chart-line"></i> Metrics Sandbox</a></li>
+                <li><a href="settings.html"><i class="fa-solid fa-sliders"></i> Configuration</a></li>
+                <li style="margin-top:auto;"><a href="index.html" style="color:var(--danger-red);"><i class="fa-solid fa-power-off"></i> Disconnect Node</a></li>
+            </ul>
+        </aside>
+
+        <main class="command-workspace-viewport" style="overflow-y:auto; padding:2.5rem;">
+            <h2>Advanced Analytics Telemetry Diagrams</h2>
+            <p style="color:var(--text-secondary-muted); margin-bottom:2rem;">Regression metrics tracking threats occurrence intervals across academic maps.</p>
+
+            <div class="command-split-operations-matrix-row">
+                <div class="glass-morphic-panel metric-chart-node-card">
+                    <h3>Threat Velocity Density Array (Weekly Logs)</h3>
+                    <div class="mock-chart-bar-scaffold">
+                        <div class="chart-bar-element">
+                            <span class="bar-label-tag">Mon</span>
+                            <div class="bar-track-path"><div class="bar-fill-indicator" style="width: 35%; background:var(--primary-blue);"></div></div>
+                            <span class="bar-value-percentage">35%</span>
+                        </div>
+                        <div class="chart-bar-element">
+                            <span class="bar-label-tag">Tue</span>
+                            <div class="bar-track-path"><div class="bar-fill-indicator" style="width: 85%; background:var(--danger-red);"></div></div>
+                            <span class="bar-value-percentage">85%</span>
+                        </div>
+                        <div class="chart-bar-element">
+                            <span class="bar-label-tag">Wed</span>
+                            <div class="bar-track-path"><div class="bar-fill-indicator" style="width: 60%; background:var(--warning-orange);"></div></div>
+                            <span class="bar-value-percentage">60%</span>
+                        </div>
+                        <div class="chart-bar-element">
+                            <span class="bar-label-tag">Thu</span>
+                            <div class="bar-track-path"><div class="bar-fill-indicator" style="width: 40%; background:var(--primary-blue);"></div></div>
+                            <span class="bar-value-percentage">40%</span>
+                        </div>
+                        <div class="chart-bar-element">
+                            <span class="bar-label-tag">Fri</span>
+                            <div class="bar-track-path"><div class="bar-fill-indicator" style="width: 95%; background:var(--danger-red);"></div></div>
+                            <span class="bar-value-percentage">95%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-morphic-panel metric-chart-node-card">
+                    <h3>Incident Resolution Performance Output</h3>
+                    <div style="text-align:center; padding:2rem 0;">
+                        <i class="fa-solid fa-gauge-high" style="font-size:4rem; color:var(--success-green); margin-bottom:1rem;"></i>
+                        <h4>Average Threat Resolution Target</h4>
+                        <p style="font-size:2rem; font-weight:700; color:#fff; margin-top:0.5rem;">42.8 Seconds</p>
+                        <span style="font-size:0.75rem; color:var(--text-secondary-muted);">98.4% Efficiency Benchmark Threshold Matched</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
