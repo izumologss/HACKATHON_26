@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Settings - Tiffin Shield</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/planner.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="space-bg"></div>
+    <div class="dashboard-shell-root">
+        <aside class="dashboard-sidebar-navigation">
+            <div class="sidebar-branding"><i class="fa-solid fa-shield-halved text-gradient"></i> TIFFIN<span>LEDGER</span></div>
+            <ul class="sidebar-menu-list">
+                <li><a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard Hub</a></li>
+                <li><a href="report.html"><i class="fa-solid fa-file-invoice"></i> File Report</a></li>
+                <li><a href="ledger.html"><i class="fa-solid fa-list-check"></i> Public Ledger</a></li>
+                <li><a href="analytics.html"><i class="fa-solid fa-chart-pie"></i> Analytics</a></li>
+                <li class="active-node"><a href="settings.html"><i class="fa-solid fa-sliders"></i> System Settings</a></li>
+            </ul>
+        </aside>
+
+        <main class="dashboard-workspace-viewport" style="padding: 2.5rem; overflow-y: auto;">
+            <h2>Cryptographic Node System Settings</h2>
+            <p style="color:var(--text-secondary-muted); margin-bottom: 2rem;">Adjust layout preferences, interface themes, and clear volatile client storage arrays safely.</p>
+
+            <div class="glass-card" style="padding: 2.5rem; max-width: 600px;">
+                <div class="control-form-element">
+                    <div class="input-element-row">
+                        <label for="themeConfiguration">Active System UI Framework Theme</label>
+                        <select id="themeConfiguration" style="background:#0a0e1c; color:#fff; padding:0.8rem; border:1px solid var(--border-glass-profile); border-radius:8px; width:100%;">
+                            <option value="cyber-dark" selected>Futuristic Cyber Dark Mode (Optimized)</option>
+                            <option value="stark-light">Stark High-Contrast Light Mode Profile</option>
+                        </select>
+                    </div>
+                    <div class="input-element-row" style="margin-top:1.5rem;">
+                        <label>Volatile Node Diagnostics Control</label>
+                        <button class="btn btn-outline" style="border-color:#ef4444; color:#ef4444; margin-top:0.5rem;" onclick="if(confirm('Purge all localized ledger reporting payloads from device memory caches?')) { localStorage.clear(); alert('Volatile storage buffers successfully reset back to factory values.'); window.location.reload(); }">Purge Device Local Memory Buffers</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

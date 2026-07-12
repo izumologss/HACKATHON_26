@@ -1,0 +1,94 @@
+/* Core Terminal Architecture Sidebar Shell Grid layouts properties configs mapping modules definitions instructions */
+.dashboard-shell-root {
+    display: grid; grid-template-columns: 260px 1fr; min-height: 100vh;
+}
+
+.dashboard-sidebar-navigation {
+    background: rgba(6, 9, 20, 0.7); border-right: 1px solid var(--border-glass-profile); backdrop-filter: blur(20px); padding: 2.5rem 1.5rem; display: flex; flex-direction: column; justify-content: space-between;
+}
+.sidebar-branding { font-size: 1.2rem; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 3.5rem; color: #fff; }
+.sidebar-branding span { color: var(--cyber-emerald); }
+.sidebar-menu-list { list-style: none; }
+.sidebar-menu-list li { margin-bottom: 0.75rem; }
+.sidebar-menu-list a {
+    display: flex; align-items: center; gap: 1rem; padding: 0.75rem 1rem; color: var(--text-secondary-muted); text-decoration: none; border-radius: 8px; font-size: 0.9rem; transition: var(--transition-smooth);
+}
+.sidebar-menu-list li.active-node a, .sidebar-menu-list a:hover {
+    background: rgba(255,255,255,0.02); color: #fff; border-left: 3px solid var(--cyber-emerald); padding-left: calc(1rem - 3px);
+}
+
+/* Core Interface Workstation Panel Container Frames parameters variables rules */
+.dashboard-workspace-viewport { display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+.dashboard-top-navigation-bar {
+    height: 70px; border-bottom: 1px solid var(--border-glass-profile); display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; background: rgba(6,9,20,0.2);
+}
+
+.live-system-status-pill { display: flex; align-items: center; gap: 0.6rem; font-size: 0.8rem; background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.15); padding: 0.35rem 0.8rem; border-radius: 50px; color: var(--cyber-emerald); font-weight: 500; }
+.pulse-indicator-dot { width: 6px; height: 6px; background: var(--cyber-emerald); border-radius: 50%; display: inline-block; animation: vitalTicks 1.5s infinite alternate; }
+@keyframes vitalTicks { from { opacity: 0.4; } to { opacity: 1; } }
+
+.dashboard-scrollable-inner-content { padding: 2.5rem; overflow-y: auto; flex: 1; display: flex; flex-direction: column; gap: 2.5rem; }
+
+/* Numeric Status Summary Data Grid Blocks rules styles setups components sets */
+.aggregation-summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+.stat-summary-card { padding: 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+.card-meta-text span { font-size: 0.75rem; color: var(--text-secondary-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.card-meta-text h2 { font-size: 1.5rem; font-weight: 600; margin-top: 0.25rem; }
+
+.icon-metric { font-size: 1.4rem; padding: 0.75rem; border-radius: 10px; background: rgba(255,255,255,0.02); }
+.color-blue { color: var(--cyber-blue); }
+.color-purple { color: var(--cyber-purple); }
+.color-emerald { color: var(--cyber-emerald); }
+
+/* Multi Chart Analytics Grid Display Frames Row Layout setups splits options variables codes mappings */
+.dashboard-split-data-row { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2.5rem; }
+.visual-analytics-panel { padding: 2rem; }
+.visual-analytics-panel h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem; }
+.panel-context-desc { font-size: 0.8rem; color: var(--text-secondary-muted); margin-bottom: 2rem; }
+
+.mock-chart-bar-scaffold { display: flex; flex-direction: column; gap: 1.25rem; }
+.chart-bar-element { display: flex; align-items: center; gap: 1rem; font-size: 0.8rem; }
+.bar-label-tag { width: 100px; color: var(--text-secondary-muted); }
+.bar-track-path { flex: 1; height: 6px; background: rgba(255,255,255,0.03); border-radius: 3px; overflow: hidden; }
+.bar-fill-indicator { height: 100%; border-radius: 3px; }
+.bar-value-percentage { width: 30px; text-align: right; font-weight: 500; }
+
+/* Radial Circular Layout Progress Gauges specifications setups metrics overlay parameters maps option */
+.radial-gauge-flex-wrapper { display: flex; align-items: center; gap: 2rem; margin-top: 1.5rem; }
+.circular-progress-svg-container { position: relative; width: 140px; height: 140px; }
+.gauge-bg-path { stroke: rgba(255,255,255,0.04); }
+.gauge-fill-path { transform: rotate(-90deg); transform-origin: 50% 50%; stroke-linecap: round; }
+.gauge-raw-value-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 1.4rem; font-weight: 700; font-family: monospace; }
+.gauge-context-legends p { font-size: 0.8rem; color: var(--text-secondary-muted); margin-top: 0.5rem; line-height: 1.5; }
+.badge-status-pill { display: inline-block; padding: 0.25rem 0.65rem; border-radius: 50px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; }
+.green-accent-pill { background: rgba(16, 185, 129, 0.1); color: var(--cyber-emerald); border: 1px solid rgba(16, 185, 129, 0.15); }
+
+/* Multi-Step Forms Module Component styles dimensions fields variables elements configuration blueprints */
+.control-form-element { display: flex; flex-direction: column; gap: 1.5rem; }
+.input-element-row { display: flex; flex-direction: column; gap: 0.5rem; }
+.input-element-row label { font-size: 0.8rem; color: var(--text-secondary-muted); font-weight: 500; }
+.input-element-row input, .input-element-row textarea, .table-search-input {
+    background: rgba(255, 255, 255, 0.01); border: 1px solid var(--border-glass-profile); padding: 0.75rem 1rem; border-radius: 8px; color: #fff; font-family: var(--font-stack); font-size: 0.9rem; transition: var(--transition-smooth);
+}
+.input-element-row input:focus, .input-element-row textarea:focus, .table-search-input:focus {
+    outline: none; border-color: var(--cyber-emerald); box-shadow: 0 0 10px rgba(16, 185, 129, 0.15); background: rgba(255,255,255,0.03);
+}
+.input-element-group-split { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+
+.multi-step-progress-row::before {
+    content: ""; position: absolute; top: 50%; left: 0; width: 100%; height: 2px; background: var(--border-glass-profile); z-index: 1; transform: translateY(-50%);
+}
+.step-progress-node {
+    width: 32px; height: 32px; border-radius: 50%; background: #0b0f19; border: 2px solid var(--border-glass-profile); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 600; position: relative; z-index: 2; transition: var(--transition-smooth); color: var(--text-secondary-muted);
+}
+.step-progress-node.node-active { border-color: var(--cyber-emerald); color: #fff; background: var(--cyber-emerald); box-shadow: 0 0 15px var(--glow-emerald); }
+
+.form-step-pane { display: none; }
+.form-step-pane.pane-active { display: block; animation: stepFade 0.4s ease-in-out forwards; }
+@keyframes stepFade { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 1024px) {
+    .dashboard-shell-root { grid-template-columns: 1fr; }
+    .dashboard-sidebar-navigation { display: none; } /* Sidebar scales down natively via template controls layer */
+    .dashboard-split-data-row { grid-template-columns: 1fr; }
+}
