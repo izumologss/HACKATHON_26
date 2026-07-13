@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Data Ledger Matrix - Tiffin Shield</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/ledger.css">
+</head>
+<body>
+    <div class="space-bg"></div>
+    <div class="dashboard-shell-root">
+        <aside class="dashboard-sidebar-navigation">
+            <div class="sidebar-branding"><i class="fa-solid fa-shield-halved text-gradient"></i> TIFFIN<span>LEDGER</span></div>
+            <ul class="sidebar-menu-list">
+                <li><a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard Hub</a></li>
+                <li><a href="report.html"><i class="fa-solid fa-file-invoice"></i> File Report</a></li>
+                <li class="active-node"><a href="ledger.html"><i class="fa-solid fa-list-check"></i> Public Ledger</a></li>
+                <li><a href="analytics.html"><i class="fa-solid fa-chart-pie"></i> Analytics</a></li>
+                <li><a href="settings.html"><i class="fa-solid fa-sliders"></i> System Settings</a></li>
+            </ul>
+        </aside>
+
+        <main class="dashboard-workspace-viewport">
+            <header class="dashboard-top-navigation-bar">
+                <div class="live-system-status-pill"><span class="pulse-indicator-dot"></span> Ledger Node Synchronization Complete</div>
+            </header>
+
+            <div class="dashboard-scrollable-inner-content">
+                <div class="glass-card student-registry-table-panel" style="padding:2.5rem;">
+                    <div class="table-action-header" style="display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:space-between; align-items:center; margin-bottom:2.5rem;">
+                        <div>
+                            <h2>Immutable Activity Registry Ledger</h2>
+                            <p style="color:var(--text-secondary-muted); font-size:0.85rem;">System-verified anonymous telemetry log streams updated in real-time.</p>
+                        </div>
+                        <div style="display:flex; gap:1rem;">
+                            <button class="btn btn-outline" id="ledgerExportCSV"><i class="fa-solid fa-file-csv"></i> Export CSV</button>
+                            <button class="btn btn-outline" id="ledgerPrintPDF"><i class="fa-solid fa-print"></i> Print Document</button>
+                        </div>
+                    </div>
+
+                    <div class="ledger-filter-grid-matrix" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:1rem; margin-bottom:2rem;">
+                        <input type="text" id="ledgerSearchInput" class="table-search-input" placeholder="Search parameters descriptions..." style="width:100%;">
+                        <select id="ledgerCategoryFilter" style="background:#0a0e1c; border:1px solid var(--border-glass-profile); border-radius:8px; padding:0.5rem 1rem; color:#fff;">
+                            <option value="ALL">All Categories</option>
+                            <option value="Forced Payment">Forced Payments Only</option>
+                            <option value="Food Theft">Food Theft Incidents</option>
+                        </select>
+                    </div>
+
+                    <div class="table-scroller">
+                        <table class="registry-data-matrix">
+                            <thead>
+                                <tr>
+                                    <th>Report ID Identifier Key</th>
+                                    <th>Category Module</th>
+                                    <th>Financial Loss</th>
+                                    <th>Food Item Tag</th>
+                                    <th>Timestamp Verified</th>
+                                    <th class="text-right">Node Security Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ledgerTableBody">
+                                </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/ledger.js"></script>
+</body>
+</html>

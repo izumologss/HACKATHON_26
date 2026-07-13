@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Command Center - SOS Flare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="particle-system-bg"></div>
+    <div class="custom-tactical-cursor" id="customCursor"></div>
+
+    <div class="command-center-root-shell">
+        <aside class="command-center-sidebar-wrapper">
+            <div class="sidebar-brand-node"><i class="fa-solid fa-satellite-dish text-danger-accent"></i> COMMAND<span>PANEL</span></div>
+            <ul class="sidebar-navigation-menu-links">
+                <li class="active-menu-node"><a href="dashboard.html"><i class="fa-solid fa-headset"></i> Live Terminal</a></li>
+                <li><a href="history.html"><i class="fa-solid fa-clock-rotate-left"></i> Signal Archives</a></li>
+                <li><a href="analytics.html"><i class="fa-solid fa-chart-line"></i> Metrics Sandbox</a></li>
+                <li><a href="settings.html"><i class="fa-solid fa-sliders"></i> Configuration</a></li>
+                <li style="margin-top:auto;"><a href="index.html" style="color:var(--danger-red);"><i class="fa-solid fa-power-off"></i> Disconnect Node</a></li>
+            </ul>
+        </aside>
+
+        <main class="command-workspace-viewport">
+            <header class="tactical-workspace-header-bar">
+                <div class="node-clearance-pill"><span class="pulse-led green-led"></span> COMMS CHANNEL LINK SYNCHRONIZED</div>
+                <div class="tactical-time-display" id="liveTacticalClock">00:00:00 UTC</div>
+            </header>
+
+            <div class="workspace-scrollable-inner-content">
+                <div class="dashboard-performance-summary-grid">
+                    <div class="glass-morphic-panel aggregate-metric-card">
+                        <div class="card-text-group">
+                            <span>Active Incidents</span>
+                            <h2 id="dashActiveSosCounter">0 Active Nodes</h2>
+                        </div>
+                        <i class="fa-solid fa-radiation summary-icon text-danger"></i>
+                    </div>
+                    <div class="glass-morphic-panel aggregate-metric-card">
+                        <div class="card-text-group">
+                            <span>Resolved Cases</span>
+                            <h2 id="dashResolvedSosCounter">0 Records</h2>
+                        </div>
+                        <i class="fa-solid fa-shield-halved summary-icon text-success"></i>
+                    </div>
+                    <div class="glass-morphic-panel aggregate-metric-card">
+                        <div class="card-text-group">
+                            <span>Today's Total Trapped</span>
+                            <h2 id="dashTodayTotalCounter">0 Events</h2>
+                        </div>
+                        <i class="fa-solid fa-bolt summary-icon text-warning"></i>
+                    </div>
+                </div>
+
+                <div class="command-split-operations-matrix-row">
+                    <div class="glass-morphic-panel active-alerts-feed-wrapper">
+                        <div class="panel-header-subsystem">
+                            <h3>Active Flare Distresses Streams</h3>
+                            <p>Real-time incident response queues requiring direct intervention mapping actions.</p>
+                        </div>
+                        <div class="dynamic-incident-feed-stack" id="activeIncidentCardsContainer">
+                            </div>
+                    </div>
+
+                    <div class="glass-morphic-panel structural-map-visualization-wrapper">
+                        <div class="panel-header-subsystem">
+                            <h3>Spatial Grid Blueprint Safezones Map</h3>
+                            <p>Flashing location arrays map dynamic sector incident location variables.</p>
+                        </div>
+                        <div class="isometric-school-map-canvas" id="schoolMapCanvas">
+                            <div class="map-sector-node sector-library" data-sector="Library">Library<span>Safe</span></div>
+                            <div class="map-sector-node sector-classroom" data-sector="Classroom">Classrooms<span>Safe</span></div>
+                            <div class="map-sector-node sector-playground" data-sector="Playground">Playground<span>Safe</span></div>
+                            <div class="map-sector-node sector-canteen" data-sector="Canteen">Canteen Hub<span>Safe</span></div>
+                            <div class="map-sector-node sector-corridor" data-sector="Corridor">Corridors<span>Safe</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="tactical-toast-wrapper hidden" id="tacticalNotificationToast">System Diagnostics Normal</div>
+
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

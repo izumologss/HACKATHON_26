@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti-Kuddu Protocol Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Modern Design System Dictionary Tokens */
+        :root {
+            --bg-tactical-deep: #0B1120;
+            --bg-glass-panel: rgba(15, 23, 42, 0.45);
+            --border-glass-profile: rgba(255, 255, 255, 0.07);
+            
+            /* Core Theme Colors Palette Variables */
+            --primary-blue: #3b82f6;
+            --secondary-purple: #a855f7;
+            --danger-red: #ef4444;
+            --warning-orange: #f97316;
+            --success-green: #10b981;
+            
+            /* Component Glow Arrays */
+            --glow-primary: rgba(59, 130, 246, 0.35);
+            --glow-secondary: rgba(168, 85, 247, 0.25);
+            
+            --font-stack: 'Poppins', sans-serif;
+            --transition-tactical: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-tactical-deep);
+            color: #f8fafc;
+            min-height: 100vh;
+            overflow-x: hidden;
+            padding: 60px 20px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 1. Dynamic Particle Background Layer Simulation */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 0);
+            background-size: 32px 32px;
+            z-index: -2;
+        }
+
+        /* 2. Ambient Gradient Waves & Floating Shapes */
+        .ambient-glow-wave-1 {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+            top: -10%;
+            left: -10%;
+            z-index: -1;
+            animation: floatingWave 12s ease-in-out infinite alternate;
+        }
+
+        .ambient-glow-wave-2 {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
+            bottom: -15%;
+            right: -10%;
+            z-index: -1;
+            animation: floatingWave 16s ease-in-out infinite alternate-reverse;
+        }
+
+        @keyframes floatingWave {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(40px, 30px) scale(1.15); }
+        }
+
+        /* Title Matrix Layout Container Elements & Typing Layout Setup */
+        .title-container {
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .clearance-badge {
+            background: rgba(168, 85, 247, 0.08);
+            border: 1px solid rgba(168, 85, 247, 0.25);
+            color: var(--secondary-purple);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 15px;
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #64748b 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .typing-subtitle {
+            font-size: 0.95rem;
+            color: #64748b;
+            margin-top: 8px;
+            font-family: monospace;
+            border-right: 2px solid var(--primary-blue);
+            white-space: nowrap;
+            overflow: hidden;
+            width: 25ch;
+            margin-left: auto;
+            margin-right: auto;
+            animation: typingEffect 5s steps(25) infinite, blinkCursor 0.75s step-end infinite;
+        }
+
+        @keyframes typingEffect { from { width: 0; } to { width: 25ch; } }
+        @keyframes blinkCursor { from, to { border-color: transparent; } 50% { border-color: var(--primary-blue); } }
+
+        /* Vercel/GitHub Style Adaptive Micro Responsive Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            width: 100%;
+            margin: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* 3. High-Fidelity Glassmorphism Card System */
+        .card {
+            background: var(--bg-glass-panel);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border-glass-profile);
+            padding: 35px 25px;
+            border-radius: 14px;
+            text-decoration: none;
+            color: #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition-tactical);
+        }
+
+        /* Stripe & Linear Gradient Visual Undertone Layout Borders */
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-purple));
+            opacity: 0;
+            transition: var(--transition-tactical);
+        }
+
+        /* Interactive Dynamic Hover Glow System Setup */
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.15);
+            background: rgba(15, 23, 42, 0.75);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(59, 130, 246, 0.1);
+            color: #ffffff;
+        }
+
+        .card:hover::after {
+            opacity: 1;
+        }
+
+        /* Dedicated Specific Theme Variant Modifiers overrides systems mapping hooks */
+        .card.sos-danger-node:hover {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(239, 68, 68, 0.15);
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+        .card.sos-danger-node:hover::after {
+            background: linear-gradient(90deg, var(--danger-red), var(--warning-orange));
+        }
+
+        /* Graphical Icon Elements Layout Parameters */
+        .icon {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            width: 65px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-glass-profile);
+            border-radius: 12px;
+            transition: var(--transition-tactical);
+            color: var(--primary-blue);
+        }
+
+        .card:hover .icon {
+            transform: scale(1.08);
+            background: rgba(59, 130, 246, 0.1);
+            border-color: rgba(59, 130, 246, 0.3);
+            color: #fff;
+        }
+
+        /* Adaptive Theme Mapping overrides color selectors properties */
+        .card.sos-danger-node .icon { color: var(--danger-red); }
+        .card.sos-danger-node:hover .icon {
+            background: rgba(239, 68, 68, 0.1);
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+
+        h2 {
+            font-size: 1.05rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-glow-wave-1"></div>
+    <div class="ambient-glow-wave-2"></div>
+
+    <div class="title-container">
+        <div class="clearance-badge">Anti-Kuddus Protocols System Enforced</div>
+        <h1>Command Control Modules</h1>
+        <div class="typing-subtitle">Initializing Secure Hub System Matrix...</div>
+    </div>
+
+    <div class="grid">
+
+        <a class="card" href="anonymous-whistleblower/">
+            <div class="icon"><i class="fa-solid fa-user-secret"></i></div>
+            <h2>Anonymous Whistleblower</h2>
+        </a>
+
+        <a class="card" href="seat_planner/">
+            <div class="icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h2>Seat Planner Matrix</h2>
+        </a>
+
+        <a class="card" href="syllabus_negotiator/profile/">
+            <div class="icon"><i class="fa-solid fa-handshake-angle"></i></div>
+            <h2>Syllabus Negotiator</h2>
+        </a>
+
+        <a class="card" href="corrupt_economy/">
+            <div class="icon"><i class="fa-solid fa-scale-unbalanced-flip"></i></div>
+            <h2>Corrupt Economy Trace</h2>
+        </a>
+
+        <a class="card sos-danger-node" href="sos/">
+            <div class="icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <h2>SOS Rescue Flare</h2>
+        </a>
+
+        <a class="card" href="fact-checker/project/">
+            <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h2>Fact Checker Engine</h2>
+        </a>
+    </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Project Justice Matrix. Built by <strong>error404</strong>.</p>
+        </div>
+    </div>
+
+</body>
+</html>

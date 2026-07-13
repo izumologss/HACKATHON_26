@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Incident - Tiffin Shield</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="space-bg"></div>
+    <div class="dashboard-shell-root">
+        <aside class="dashboard-sidebar-navigation">
+            <div class="sidebar-branding"><i class="fa-solid fa-shield-halved text-gradient"></i> TIFFIN<span>LEDGER</span></div>
+            <ul class="sidebar-menu-list">
+                <li><a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard Hub</a></li>
+                <li class="active-node"><a href="report.html"><i class="fa-solid fa-file-invoice"></i> File Report</a></li>
+                <li><a href="ledger.html"><i class="fa-solid fa-list-check"></i> Public Ledger</a></li>
+                <li><a href="analytics.html"><i class="fa-solid fa-chart-pie"></i> Analytics</a></li>
+                <li><a href="settings.html"><i class="fa-solid fa-sliders"></i> System Settings</a></li>
+            </ul>
+        </aside>
+
+        <main class="dashboard-workspace-viewport">
+            <header class="dashboard-top-navigation-bar">
+                <div class="live-system-status-pill"><span class="pulse-indicator-dot"></span> Secure Anonymity Network Active</div>
+            </header>
+
+            <div class="dashboard-scrollable-inner-content" style="max-width: 800px; margin: 0 auto; width:100%;">
+                <div class="glass-card" style="padding: 3rem; margin-top: 2rem;">
+                    <h2 style="margin-bottom: 0.5rem;">Secure Incident Reporting Terminal</h2>
+                    <p style="color: var(--text-secondary-muted); margin-bottom: 2.5rem; font-size:0.9rem;">Your physical IP address, session variables, and cryptographic identifier arrays are obfuscated.</p>
+                    
+                    <div class="multi-step-progress-row" style="display:flex; justify-content:space-between; margin-bottom: 3rem; position:relative;">
+                        <span class="step-progress-node node-active" id="stepIndicator1">1</span>
+                        <span class="step-progress-node" id="stepIndicator2">2</span>
+                        <span class="step-progress-node" id="stepIndicator3">3</span>
+                        <span class="step-progress-node" id="stepIndicator4">4</span>
+                    </div>
+
+                    <form id="multiStepReportingForm" autocomplete="off" class="control-form-element">
+                        <div class="form-step-pane pane-active" id="stepPane1">
+                            <h3 style="margin-bottom:1.5rem;">Select Incident Matrix Classification</h3>
+                            <div class="input-element-row">
+                                <label style="display:flex; gap:1rem; align-items:center; background:rgba(255,255,255,0.02); padding:1rem; border-radius:8px; border:1px solid var(--border-glass-profile); cursor:pointer;">
+                                    <input type="radio" name="incidentCategory" value="Forced Payment" checked style="accent-color:var(--cyber-emerald)"> 
+                                    <div><strong>Forced Extortion / Coerced Payment</strong><p style="font-size:0.75rem; color:var(--text-secondary-muted);">Protection money, classroom currency taxes, cash demands</p></div>
+                                </label>
+                            </div>
+                            <div class="input-element-row" style="margin-top:1rem;">
+                                <label style="display:flex; gap:1rem; align-items:center; background:rgba(255,255,255,0.02); padding:1rem; border-radius:8px; border:1px solid var(--border-glass-profile); cursor:pointer;">
+                                    <input type="radio" name="incidentCategory" value="Food Theft" style="accent-color:var(--cyber-emerald)"> 
+                                    <div><strong>Caloric Resource Interception / Food Theft</strong><p style="font-size:0.75rem; color:var(--text-secondary-muted);">Tiffin confiscation, snacks stolen, structural lunch disruption</p></div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-step-pane" id="stepPane2">
+                            <h3 style="margin-bottom:1.5rem;">Granular Metrics Input Logs</h3>
+                            <div class="input-element-row">
+                                <label for="incidentDescription">Detailed Event Trace Log Description</label>
+                                <textarea id="incidentDescription" rows="4" placeholder="Describe the chronological parameters of the forced payment or food theft event..." required></textarea>
+                            </div>
+                            <div class="input-element-group-split" style="margin-top:1rem;">
+                                <div class="input-element-row">
+                                    <label for="incidentAmount">Estimated Cash Value Equivalent ($)</label>
+                                    <input type="number" id="incidentAmount" placeholder="0.00" min="0">
+                                </div>
+                                <div class="input-element-row">
+                                    <label for="incidentFoodItem">Target Food Item Name (If Applicable)</label>
+                                    <input type="text" id="incidentFoodItem" placeholder="e.g., Chicken Sandwich">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-step-pane" id="stepPane3">
+                            <h3 style="margin-bottom:1.5rem;">Anonymized Forensic Evidence Artifacts</h3>
+                            <div class="input-element-row">
+                                <label>Upload Proof Metadata Container (Images, Video, or PDF layers)</label>
+                                <div style="border:2px dashed var(--border-glass-profile); padding:3rem; text-align:center; border-radius:12px; cursor:pointer;" id="evidenceDropzone">
+                                    <i class="fa-solid fa-cloud-arrow-up" style="font-size:2.5rem; color:var(--cyber-emerald); margin-bottom:1rem;"></i>
+                                    <p>Drag files here or click to mount asset arrays inside system sandbox buffer</p>
+                                    <input type="file" id="evidenceFileField" style="display:none;">
+                                </div>
+                                <div id="evidencePreviewArea" style="margin-top:1rem; display:none; padding:1rem; background:rgba(255,255,255,0.02); border-radius:8px; border:1px solid var(--cyber-emerald);">
+                                    <i class="fa-solid fa-file-shield"></i> <span id="evidenceFileName">artifact.pdf</span> (Source Document Mounted)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-step-pane" id="stepPane4">
+                            <h3 style="margin-bottom:1.5rem;">Review & Commit Payload Sequence</h3>
+                            <div class="glass-card" style="padding:1.5rem; background:rgba(0,0,0,0.2);" id="reviewManifestBlock">
+                                </div>
+                        </div>
+
+                        <div class="form-nav-strip" style="display:flex; justify-content:space-between; margin-top: 3rem;">
+                            <button type="button" class="btn btn-outline" id="btnPrevStep" disabled>Previous Step</button>
+                            <button type="button" class="btn btn-primary" id="btnNextStep">Continue Verification</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="toast-system-notification hidden" id="toastNotification">Payload Status</div>
+
+    <script src="js/script.js"></script>
+    <script src="js/report.js"></script>
+</body>
+</html>

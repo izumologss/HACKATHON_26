@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Hub Terminal - Tiffin Shield</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="space-bg"></div>
+    <div class="dashboard-shell-root">
+        <aside class="dashboard-sidebar-navigation">
+            <div class="sidebar-branding"><i class="fa-solid fa-shield-halved text-gradient"></i> TIFFIN<span>LEDGER</span></div>
+            <ul class="sidebar-menu-list">
+                <li class="active-node"><a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard Hub</a></li>
+                <li><a href="report.html"><i class="fa-solid fa-file-invoice"></i> File Report</a></li>
+                <li><a href="ledger.html"><i class="fa-solid fa-list-check"></i> Public Ledger</a></li>
+                <li><a href="analytics.html"><i class="fa-solid fa-chart-pie"></i> Analytics</a></li>
+                <li><a href="settings.html"><i class="fa-solid fa-sliders"></i> System Settings</a></li>
+            </ul>
+        </aside>
+
+        <main class="dashboard-workspace-viewport">
+            <header class="dashboard-top-navigation-bar">
+                <div class="live-system-status-pill"><span class="pulse-indicator-dot"></span> Ecosystem Core Aggregator Stream Node Online</div>
+            </header>
+
+            <div class="dashboard-scrollable-inner-content">
+                <div class="aggregation-summary-grid">
+                    <div class="glass-card stat-summary-card">
+                        <div class="card-meta-text">
+                            <span>Aggregated Reports Count</span>
+                            <h2 id="dashTotalReportsCount">148 Nodes</h2>
+                        </div>
+                        <i class="fa-solid fa-user-secret icon-metric color-blue"></i>
+                    </div>
+                    <div class="glass-card stat-summary-card">
+                        <div class="card-meta-text">
+                            <span>Cumulative Forfeited Capital</span>
+                            <h2 id="dashTotalAmountSum">$4,350.00</h2>
+                        </div>
+                        <i class="fa-solid fa-money-bill-wave icon-metric color-emerald"></i>
+                    </div>
+                    <div class="glass-card stat-summary-card">
+                        <div class="card-meta-text">
+                            <span>Intercepted Nutritional Assets</span>
+                            <h2 id="dashTotalFoodCount">284 Items</h2>
+                        </div>
+                        <i class="fa-solid fa-pizza-slice icon-metric color-purple"></i>
+                    </div>
+                </div>
+
+                <div class="dashboard-split-data-row">
+                    <div class="glass-card visual-analytics-panel">
+                        <h3>Loss Allocation Distribution Vectors</h3>
+                        <p class="panel-context-desc">Parallel tracking of extorted finances versus physical food commodities replacement valuations.</p>
+                        <div class="mock-chart-bar-scaffold" style="margin-top:2rem;">
+                            <div class="chart-bar-element">
+                                <span class="bar-label-tag">Protection Fees</span>
+                                <div class="bar-track-path"><div class="bar-fill-indicator" style="width: 72%; background:var(--cyber-blue);"></div></div>
+                                <span class="bar-value-percentage">72%</span>
+                            </div>
+                            <div class="chart-bar-element">
+                                <span class="bar-label-tag">Stolen Lunches</span>
+                                <div class="bar-track-path"><div class="bar-fill-indicator" style="width: 48%; background:var(--cyber-purple);"></div></div>
+                                <span class="bar-value-percentage">48%</span>
+                            </div>
+                            <div class="chart-bar-element">
+                                <span class="bar-label-tag">Coerced Fines</span>
+                                <div class="bar-track-path"><div class="bar-fill-indicator" style="width: 29%; background:var(--cyber-emerald);"></div></div>
+                                <span class="bar-value-percentage">29%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card visual-analytics-panel configuration-status-flex">
+                        <h3>Anonymization Path Congruence Score</h3>
+                        <div class="radial-gauge-flex-wrapper">
+                            <div class="circular-progress-svg-container">
+                                <svg class="svg-gauge-viewport" width="140" height="140">
+                                    <circle class="gauge-bg-path" stroke="rgba(255,255,255,0.05)" stroke-width="10" fill="transparent" r="60" cx="70" cy="70"/>
+                                    <circle class="gauge-fill-path" stroke="var(--cyber-emerald)" stroke-width="10" fill="transparent" r="60" cx="70" cy="70" stroke-dasharray="377" stroke-dashoffset="38"/>
+                                </svg>
+                                <div class="gauge-raw-value-overlay">100%</div>
+                            </div>
+                            <div class="gauge-context-legends">
+                                <div class="badge-status-pill green-accent-pill">Cryptographically Shielded</div>
+                                <p>System telemetry channels indicate full data routing path segregation. Identity leaks = 0.000%.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

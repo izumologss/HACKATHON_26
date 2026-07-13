@@ -1,0 +1,65 @@
+/* Distress Module Control Panel Form Workspace Blueprints configuration rules mapping setups components values options */
+.distress-form-workstation {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 100px 2rem 4rem 2rem;
+}
+
+.distress-console-card {
+    width: 100%; max-width: 750px; padding: 3.5rem; border-color: rgba(239, 68, 68, 0.12);
+}
+
+.console-alert-header { text-align: center; margin-bottom: 3rem; }
+.console-alert-header h2 { font-size: 1.6rem; letter-spacing: 0.5px; margin-bottom: 0.5rem; color: #fff; }
+.console-alert-header p { font-size: 0.85rem; color: var(--text-secondary-muted); }
+
+/* Giant Pulse Core Trigger Button Visual Framework Engine Mappings rules set layouts */
+.sos-pulse-trigger-wrapper { display: flex; justify-content: center; margin-bottom: 3.5rem; }
+.giant-sos-pulse-button {
+    position: relative; width: 150px; height: 150px; border-radius: 50%; background: linear-gradient(135deg, var(--danger-red) 0%, #b91c1c 100%); border: none; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; color: #fff; box-shadow: 0 0 35px var(--glow-danger); outline: none; transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.giant-sos-pulse-button:active { transform: scale(0.95); }
+.giant-sos-pulse-button i { font-size: 2.2rem; }
+.btn-core-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; }
+
+.inner-pulse-ring {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; background: var(--danger-red); z-index: -1; opacity: 0.25; pointer-events: none;
+}
+.animation-ping { animation: tacticalPing 2s cubic-bezier(0, 0, 0.2, 1) infinite; }
+.animation-pulse { animation: tacticalPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+@keyframes tacticalPing { 75%, 100% { transform: scale(1.6); opacity: 0; } }
+@keyframes tacticalPulse { 50% { transform: scale(1.15); opacity: 0.15; } }
+
+/* Functional Technical Form Processing Element Controls input arrays fields variable configurations specs blueprints */
+.tactical-form-blueprint { display: flex; flex-direction: column; gap: 1.5rem; }
+.form-input-row-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.input-element-block { display: flex; flex-direction: column; gap: 0.5rem; }
+.input-element-block label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-secondary-muted); }
+
+.tactical-form-blueprint input, .tactical-form-blueprint select, .tactical-form-blueprint textarea, .tactical-input-node {
+    background: rgba(255, 255, 255, 0.01); border: 1px solid var(--border-glass-profile); padding: 0.8rem 1.2rem; border-radius: 8px; color: #fff; font-family: var(--font-stack); font-size: 0.9rem; transition: var(--transition-smooth);
+}
+.tactical-form-blueprint input:focus, .tactical-form-blueprint select:focus, .tactical-form-blueprint textarea:focus, .tactical-input-node:focus {
+    outline: none; border-color: var(--danger-red); box-shadow: 0 0 15px rgba(239, 68, 68, 0.15); background: rgba(255,255,255,0.03);
+}
+.tactical-form-blueprint select option { background: #0f172a; color: #fff; }
+
+/* Micro-UI Confirmation Overlay Layer Panels specifications metrics layout options mappings values components set */
+.tactical-confirmation-overlay {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(5, 7, 12, 0.85); backdrop-filter: blur(10px); z-index: 10000; display: flex; align-items: center; justify-content: center; padding: 2rem; transition: var(--transition-smooth);
+}
+.tactical-confirmation-overlay.hidden, .tactical-toast-wrapper.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+
+.modal-alert-container { max-width: 480px; width: 100%; padding: 3rem; text-align: center; border-color: rgba(16, 185, 129, 0.2); }
+.verification-success-icon { font-size: 3.5rem; color: var(--success-green); margin-bottom: 1.5rem; display: block; }
+.modal-alert-container h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; }
+.modal-alert-container p { font-size: 0.85rem; color: var(--text-secondary-muted); line-height: 1.5; }
+
+/* Dynamic Toast Banner CSS styling values parameters allocations layout structures properties maps codes */
+.tactical-toast-wrapper {
+    position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); padding: 0.8rem 2.2rem; background: rgba(15, 23, 42, 0.95); border: 1px solid var(--danger-red); border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.6); font-size: 0.85rem; font-weight: 500; color: #fff; z-index: 100000; backdrop-filter: blur(8px); transition: opacity 0.3s, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (max-width: 768px) {
+    .form-input-row-grid { grid-template-columns: 1fr; }
+    .distress-console-card { padding: 2rem 1.5rem; }
+}

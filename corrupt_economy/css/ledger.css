@@ -1,0 +1,20 @@
+/* Ledger Datatables View Frame rules setups components properties parameters mappings options configurations codes */
+.student-registry-table-panel { border-radius: 16px; margin-top: 1rem; }
+.table-scroller { overflow-x: auto; width: 100%; margin-top: 1rem; }
+
+.registry-data-matrix { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.85rem; }
+.registry-data-matrix th {
+    padding: 1.2rem 1rem; border-bottom: 1px solid var(--border-glass-profile); color: var(--text-secondary-muted); font-weight: 500; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.5px;
+}
+.registry-data-matrix td { padding: 1.2rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.02); vertical-align: middle; color: #e2e8f0; }
+
+.badge-ledger-status { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.25rem 0.65rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; }
+.status-immutable { background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2); color: var(--cyber-emerald); }
+
+.text-right { text-align: right; }
+
+/* Universal Toast Notifications system floating parameters display properties */
+.toast-system-notification {
+    position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%) translateY(0); padding: 0.8rem 2rem; background: rgba(6, 9, 20, 0.95); border: 1px solid var(--cyber-emerald); backdrop-filter: blur(8px); border-radius: 8px; font-size: 0.9rem; color: #fff; z-index: 10000; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: opacity 0.3s, transform 0.3s;
+}
+.toast-system-notification.hidden { opacity: 0; transform: translateX(-50%) translateY(15px); pointer-events: none; }
